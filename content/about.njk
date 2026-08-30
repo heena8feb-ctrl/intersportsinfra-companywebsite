@@ -120,26 +120,9 @@ why_publish_paragraphs:
   - "Most sports surface quotes in India name no system, no dtex, no coat count and no compaction figure. That vagueness is where corners get cut after the contract is signed."
   - "Ours names all of it. Take our specification to any other contractor and compare like for like — we would rather win on the number than on the wording."
 
-team_eyebrow: "The people"
-team_heading: "Who You'll Deal With"
-team_intro: "Placeholder cards — send photographs and titles and these become real."
-team:
-  - image: "/images/about-1-photo-portrait.jpg"
-    alt: "Photo — portrait"
-    name: "Sourabh Yadav"
-    role: "Partner"
-  - image: "/images/about-2-photo-portrait.jpg"
-    alt: "Photo — portrait"
-    name: "[ Name ]"
-    role: "Partner"
-  - image: "/images/about-3-photo-portrait.jpg"
-    alt: "Photo — portrait"
-    name: "[ Name ]"
-    role: "Site engineer"
-  - image: "/images/about-4-photo-portrait.jpg"
-    alt: "Photo — portrait"
-    name: "[ Name ]"
-    role: "Project manager"
+team_eyebrow: "Who you'll deal with"
+team_heading: "A Team That's Done This Before"
+team_text: "Every project is handled by our own team of experienced sports infrastructure consultants, project managers and site engineers — not subcontracted labour with no stake in the outcome. The same engineer who writes your specification is the one who inspects the base before the surface goes down, and signs off at handover."
 
 why_eyebrow: "Why choose us"
 why_heading: "Five Differences You Can Check"
@@ -276,13 +259,9 @@ cta_text: "We will take you to a project near you so you can walk the surface be
   <div class="wrap">
     <div class="sec__head">
       <div class="sec__label"><p class="eyebrow">{{ team_eyebrow }}</p><h2 class="rv">{{ team_heading }}</h2></div>
-      <p class="rv rv-d1">{{ team_intro }}</p>
     </div>
-    <div class="team">
-      {% for m in team %}
-      {% set _d = loop.index0 %}
-      <figure class="rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}"><img class="ph" src="{{ m.image }}" alt="{{ m.alt }}" loading="lazy"><b>{{ m.name }}</b><em>{{ m.role }}</em></figure>
-      {% endfor %}
+    <div class="prose rv rv-d1" style="max-width:760px">
+      <p>{{ team_text }}</p>
     </div>
   </div>
 </section>
