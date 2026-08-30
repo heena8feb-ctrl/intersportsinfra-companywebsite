@@ -117,7 +117,7 @@ featured_projects:
 
 clients_eyebrow: "Trusted by"
 clients_heading: "Schools, Academies, Builders"
-client_logos: ["Client logo", "Client logo", "Client logo", "Client logo", "Client logo", "Client logo"]
+clients_trust_text: "We work with schools, academies, residential societies, clubs and national partners across India — each project scoped, specified and signed off before ground is broken."
 
 reviews_eyebrow: "Google reviews"
 reviews_heading: "What Clients Say"
@@ -296,14 +296,16 @@ cta_text: "Send us the site dimensions and the sport. You'll have a layout and a
         <p class="eyebrow">{{ clients_eyebrow }}</p>
         <h2 id="cl-h" class="rv">{{ clients_heading }}</h2>
       </div>
+      <p class="rv rv-d1">{{ clients_trust_text }}</p>
     </div>
-    <ul class="clients rv rv-d1">
-      {% for logo in client_logos %}<li>{{ logo }}</li>{% endfor %}
-    </ul>
   </div>
 </section>
 
-<!-- ======================= REVIEWS ======================= -->
+{#
+<!-- ======================= REVIEWS =======================
+     Disabled until we have real client testimonials.
+     Delete the two comment-marker lines above and below this
+     block to bring the section back. -->
 <section class="sec" aria-labelledby="rev-h">
   <div class="wrap">
     <div class="sec__head">
@@ -326,6 +328,7 @@ cta_text: "Send us the site dimensions and the sport. You'll have a layout and a
     </div>
   </div>
 </section>
+#}
 
 <!-- ======================= PROCESS ======================= -->
 <section class="sec sec--dark angle-top" aria-labelledby="pr-h">
