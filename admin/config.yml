@@ -4,6 +4,13 @@ backend:
 media_folder: src/images
 public_folder: /images
 publish_mode: simple
+# Content pages use a .njk extension (Nunjucks templates), which Decap
+# doesn't auto-detect as a frontmatter format the way it does .md files.
+# This tells it explicitly: parse the --- YAML --- block at the top of
+# each file, and treat everything below it as an opaque "body" that gets
+# preserved untouched on save. Without this, fields for every content/*.njk
+# file show up blank even though the data is right there in the file.
+format: frontmatter
 collections:
 - name: pages
   label: Website Pages
@@ -11,6 +18,7 @@ collections:
   - name: site_settings
     label: Site Settings (phone, email, address, etc.)
     file: _data/site.json
+    format: json
     fields:
     - label: Company Name
       name: company_name
