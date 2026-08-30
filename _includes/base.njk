@@ -173,5 +173,25 @@
 </nav>
 
 <script src="/script.js" defer></script>
+
+<!--
+  Netlify Identity is loaded on every page (not just /admin) because
+  invite, password-recovery and email-confirmation links from Netlify
+  always redirect to the site's root URL, not to /admin directly. If the
+  widget isn't present on whichever page the link lands on, it can't see
+  the token in the URL and the "set your password" step silently fails.
+  This runs invisibly for normal visitors — it only does anything when a
+  token is present in the URL.
+-->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+        APIUrl: "https://intersportsinfra-cms.netlify.app/.netlify/identity"
+      });
+    }
+  });
+</script>
 </body>
 </html>

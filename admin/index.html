@@ -18,10 +18,10 @@
     // project that still holds Identity + Git Gateway (kept alive purely
     // as a CMS backend; it does not need to serve traffic).
     // Replace the URL below if your Netlify site's default subdomain is
-    // different from intersportsinfrawebsite.netlify.app.
+    // different from intersportsinfra-cms.netlify.app.
     if (window.netlifyIdentity) {
       window.netlifyIdentity.init({
-        APIUrl: "https://intersportsinfrawebsite.netlify.app/.netlify/identity"
+        APIUrl: "https://intersportsinfra-cms.netlify.app/.netlify/identity"
       });
       window.netlifyIdentity.on("init", (user) => {
         if (!user) {
