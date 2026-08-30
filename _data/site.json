@@ -1,0 +1,20 @@
+{
+  "company_name": "Inter Sports Infra LLP",
+  "tagline": "Sports surfaces, engineered.",
+  "phone_display": "+91 92179 81815",
+  "phone_link": "+919217981815",
+  "whatsapp_number": "919217981815",
+  "whatsapp_default_message": "Hi Inter Sports Infra, I'd like a quote for a sports surface.",
+  "email": "intersportsinfra@gmail.com",
+  "website": "https://www.intersportsinfra.com/",
+  "address_line1": "272, First Floor, Sector 8, Faridabad,",
+  "address_line2": "Ballabhgarh, Haryana 121004",
+  "gstin": "06XXXXXXXXXXX",
+  "certifications": ["FIFA quality", "ITF", "BWF", "FIBA", "IAAF"],
+  "service_areas": ["Delhi NCR", "Faridabad & Gurugram", "Noida & Ghaziabad", "Mumbai", "Bangalore", "Guwahati & North East"],
+  "footer_cities_line": "New Delhi | Mumbai | Bangalore | Guwahati",
+  "social": {
+    "instagram_url": "#",
+    "linkedin_url": "#"
+  }
+}

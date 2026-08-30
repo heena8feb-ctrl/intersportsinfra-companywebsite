@@ -1,0 +1,208 @@
+---
+layout: base.njk
+nav: maintenance
+permalink: /maintenance/index.html
+title: "Maintenance & AMC — Sports Surface Care Plans | Inter Sports Infra LLP"
+description: "Annual maintenance contracts for sports surfaces. Three tiers priced by area, plus warranty terms by surface type."
+
+hero_eyebrow: "Maintenance & AMC"
+hero_heading: "A Surface Is<br>a <em>Commitment</em>,<br>Not a Purchase"
+hero_sub: "Turf loses pile and infill. Acrylic loses grip. Vinyl loses its texture if it is waxed. An AMC keeps the surface playing to standard in year five, and keeps your warranty valid."
+
+plans_eyebrow: "AMC tiers"
+plans_heading: "Three Plans, Priced by Area"
+plans_intro: "Rates depend on surface type and square metres. The scope below is fixed; the price is quoted per site."
+plans:
+  - name: "Essential"
+    featured: false
+    price: "Two visits per year"
+    description: "The minimum that keeps a warranty valid. Suits low-use school and society courts."
+    items:
+      - "Two scheduled inspections a year"
+      - "Deep clean and debris removal"
+      - "Turf brushing and pile lifting"
+      - "Written condition report after each visit"
+      - "Line marking touch-up, minor"
+  - name: "Performance"
+    featured: true
+    flag: "Most chosen"
+    price: "Four visits per year"
+    description: "For clubs and academies with daily play. Keeps the surface at handover standard."
+    items:
+      - "Everything in Essential"
+      - "Quarterly visits, monsoon visit included"
+      - "Infill top-up and redistribution"
+      - "Drainage and channel clearing"
+      - "Seam and joint inspection with repair"
+      - "Net, post and fence check"
+      - "48-hour response on reported faults"
+  - name: "Commercial"
+    featured: false
+    price: "Monthly, plus on-call"
+    description: "For revenue-generating venues where a closed court costs money every hour."
+    items:
+      - "Everything in Performance"
+      - "Monthly attendance"
+      - "24-hour emergency response"
+      - "Annual recoat allowance (acrylic)"
+      - "Equipment servicing included"
+      - "Floodlight lamp replacement"
+      - "Priority scheduling in peak season"
+plans_note: "All tiers include a written condition report. Consumables such as infill granules and acrylic coating are charged at cost unless stated in the plan."
+
+care_eyebrow: "Your side of it"
+care_heading: "What You Should Do Between Visits"
+care_intro: "None of this needs a contractor. All of it extends the surface life."
+care_table:
+  caption: "Routine care by surface"
+  rows:
+    - item: "Artificial turf"
+      spec: "Brush weekly; remove leaves before they rot"
+    - item: "Acrylic court"
+      spec: "Sweep and rinse; no pressure washing"
+    - item: "PU / EPDM"
+      spec: "Wash monthly with neutral detergent"
+    - item: "Indoor vinyl"
+      spec: "Dry mop daily, damp mop weekly"
+    - item: "Wooden floor"
+      spec: "Dry mop only; control humidity"
+    - item: "All surfaces"
+      spec: "No vehicles, no chairs, no studs indoors"
+kill_heading: "The three things that kill surfaces"
+kill_items:
+  - bold: "Blocked drains."
+    text: "Water that cannot leave sits under the surface and lifts it. Clear channels before every monsoon."
+  - bold: "Wax and polish on vinyl."
+    text: "It looks better for a week and destroys the anti-slip texture permanently. It is also the most common warranty void we see."
+  - bold: "Lost infill on turf."
+    text: "Infill migrates to the low end and gets carried out on shoes. Once pile is unsupported it folds flat and does not recover."
+
+warranty_eyebrow: "Warranty"
+warranty_heading: "Cover by Surface Type"
+warranty_intro: "Indicative terms. Your actual warranty is issued in writing at handover and takes precedence."
+warranty_table:
+  caption: "Warranty period"
+  rows:
+    - item: "Artificial turf (yarn)"
+      spec: "8 years against UV degradation"
+    - item: "Turf installation"
+      spec: "3 years on seams and anchoring"
+    - item: "Acrylic hard court"
+      spec: "5 years on coating adhesion"
+    - item: "PU / EPDM surface"
+      spec: "5 years on bond and wear"
+    - item: "Indoor vinyl"
+      spec: "5–7 years, manufacturer backed"
+    - item: "Wooden sprung floor"
+      spec: "10 years structural"
+    - item: "Civil works & base"
+      spec: "5 years on settlement"
+    - item: "Equipment"
+      spec: "1–2 years, as per manufacturer"
+covered_heading: "What is covered"
+covered_text: "Manufacturing defects, coating delamination, seam failure, base settlement beyond tolerance, and premature UV fade against the published figure."
+not_covered_heading: "What is not"
+not_covered_text: "Vandalism, vehicles driven onto the surface, studs on indoor floors, chemical spills, waxing or polishing, flood damage from drains blocked by the client, and normal wear within published tolerance."
+valid_heading: "Keeping it valid"
+valid_text: "Most warranties require documented annual maintenance. An AMC with us satisfies that; so does your own maintenance, provided you keep records. Losing the paperwork is the usual reason a valid claim fails."
+
+cta_heading: "Already Have a Surface We Did Not Build?"
+cta_text: "We take on AMC for surfaces laid by other contractors. We will inspect and report honestly before quoting."
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M70 60A360 360 0 0 1 430 420" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1080" cy="190" r="110" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Maintenance</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+    <div class="phero__cta rv rv-d3"><a class="btn btn--primary" href="/contact/">Request an AMC Quote <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a><a class="btn btn--ghost" href="#warranty">Warranty Terms</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ plans_eyebrow }}</p><h2 class="rv">{{ plans_heading }}</h2></div>
+      <p class="rv rv-d1">{{ plans_intro }}</p>
+    </div>
+    <div class="plans">
+      {% for plan in plans %}
+      {% set _d = loop.index0 %}
+      <div class="plan{% if plan.featured %} plan--hero{% endif %} rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}">
+        {% if plan.flag %}<span class="plan__flag">{{ plan.flag }}</span>{% endif %}
+        <h3>{{ plan.name }}</h3>
+        <p class="plan__price">{{ plan.price }}</p>
+        <p>{{ plan.description }}</p>
+        <ul>{% for item in plan.items %}<li>{{ item }}</li>{% endfor %}</ul>
+        <a class="btn{% if plan.featured %} btn--primary{% else %} btn--dark{% endif %}" href="/contact/">Get a Price</a>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="form__note">{{ plans_note }}</p>
+  </div>
+</section>
+
+<section class="sec sec--chalk">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ care_eyebrow }}</p><h2 class="rv">{{ care_heading }}</h2></div>
+      <p class="rv rv-d1">{{ care_intro }}</p>
+    </div>
+    <div class="cols">
+      <div class="rv">
+      <table class="spec">
+        <caption>{{ care_table.caption }}</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
+        <tbody>{% for row in care_table.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>{% endfor %}</tbody>
+      </table></div>
+      <div class="prose rv rv-d1">
+        <h3>{{ kill_heading }}</h3>
+        {% for k in kill_items %}<p><strong>{{ k.bold }}</strong> {{ k.text }}</p>{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark" id="warranty">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow eyebrow--on-dark">{{ warranty_eyebrow }}</p><h2 class="rv">{{ warranty_heading }}</h2></div>
+      <p class="rv rv-d1">{{ warranty_intro }}</p>
+    </div>
+    <div class="cols">
+      <div class="rv">
+      <table class="spec">
+        <caption>{{ warranty_table.caption }}</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
+        <tbody>{% for row in warranty_table.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>{% endfor %}</tbody>
+      </table></div>
+      <div class="prose rv rv-d1">
+        <h3>{{ covered_heading }}</h3>
+        <p>{{ covered_text }}</p>
+        <h3>{{ not_covered_heading }}</h3>
+        <p>{{ not_covered_text }}</p>
+        <h3>{{ valid_heading }}</h3>
+        <p>{{ valid_text }}</p>
+        <div class="phero__cta"><a class="btn btn--primary" href="/contact/">Ask About Your Warranty <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <title>Inter Sports Infra — Content Admin</title>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <!-- Netlify Identity widget: powers the login on this page -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Decap CMS (formerly Netlify CMS) -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // IMPORTANT: this site is now hosted on Cloudflare Pages, not on a
+    // *.netlify.app domain — so the Identity widget can no longer guess
+    // which Netlify site to talk to. Point it explicitly at the Netlify
+    // project that still holds Identity + Git Gateway (kept alive purely
+    // as a CMS backend; it does not need to serve traffic).
+    // Replace the URL below if your Netlify site's default subdomain is
+    // different from intersportsinfrawebsite.netlify.app.
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+        APIUrl: "https://intersportsinfrawebsite.netlify.app/.netlify/identity"
+      });
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

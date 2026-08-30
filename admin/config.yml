@@ -1,0 +1,1848 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: src/images
+public_folder: /images
+publish_mode: simple
+collections:
+- name: pages
+  label: Website Pages
+  files:
+  - name: site_settings
+    label: Site Settings (phone, email, address, etc.)
+    file: _data/site.json
+    fields:
+    - label: Company Name
+      name: company_name
+      widget: string
+    - label: Tagline
+      name: tagline
+      widget: string
+    - label: Phone Display
+      name: phone_display
+      widget: string
+    - label: Phone Link
+      name: phone_link
+      widget: string
+    - label: Whatsapp Number
+      name: whatsapp_number
+      widget: string
+    - label: Whatsapp Default Message
+      name: whatsapp_default_message
+      widget: string
+    - label: Email
+      name: email
+      widget: string
+    - label: Website
+      name: website
+      widget: string
+    - label: Address Line1
+      name: address_line1
+      widget: string
+    - label: Address Line2
+      name: address_line2
+      widget: string
+    - label: Gstin
+      name: gstin
+      widget: string
+      hint: Company GST registration number.
+    - label: Certifications
+      name: certifications
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Service Areas
+      name: service_areas
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Footer Cities Line
+      name: footer_cities_line
+      widget: string
+    - label: Social
+      name: social
+      widget: object
+      fields:
+      - label: Instagram Url
+        name: instagram_url
+        widget: string
+      - label: Linkedin Url
+        name: linkedin_url
+        widget: string
+  - name: '404'
+    label: '404'
+    file: content/404.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: string
+    - label: Heading
+      name: heading
+      widget: string
+    - label: Text
+      name: text
+      widget: text
+  - name: about
+    label: About
+    file: content/about.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Story Eyebrow
+      name: story_eyebrow
+      widget: string
+    - label: Story Heading
+      name: story_heading
+      widget: string
+    - label: Story Paragraphs
+      name: story_paragraphs
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Tiles
+      name: tiles
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Registered Table
+      name: registered_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Vision Eyebrow
+      name: vision_eyebrow
+      widget: string
+    - label: Vision Quote
+      name: vision_quote
+      widget: string
+    - label: Vision Text
+      name: vision_text
+      widget: text
+    - label: Method Eyebrow
+      name: method_eyebrow
+      widget: string
+    - label: Method Heading
+      name: method_heading
+      widget: string
+    - label: Method Intro
+      name: method_intro
+      widget: string
+    - label: Method Steps
+      name: method_steps
+      widget: list
+      fields:
+      - label: Number
+        name: number
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+    - label: Materials Eyebrow
+      name: materials_eyebrow
+      widget: string
+    - label: Materials Heading
+      name: materials_heading
+      widget: string
+    - label: Materials Intro
+      name: materials_intro
+      widget: text
+    - label: Turf Table
+      name: turf_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Indoor Table
+      name: indoor_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Drainage Table
+      name: drainage_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Why Publish Heading
+      name: why_publish_heading
+      widget: string
+    - label: Why Publish Paragraphs
+      name: why_publish_paragraphs
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Team Eyebrow
+      name: team_eyebrow
+      widget: string
+    - label: Team Heading
+      name: team_heading
+      widget: string
+    - label: Team Intro
+      name: team_intro
+      widget: string
+    - label: Team
+      name: team
+      widget: list
+      fields:
+      - label: Image
+        name: image
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Name
+        name: name
+        widget: string
+      - label: Role
+        name: role
+        widget: string
+    - label: Why Eyebrow
+      name: why_eyebrow
+      widget: string
+    - label: Why Heading
+      name: why_heading
+      widget: string
+    - label: Why Intro
+      name: why_intro
+      widget: string
+    - label: Why Cards
+      name: why_cards
+      widget: list
+      fields:
+      - label: Number
+        name: number
+        widget: string
+      - label: Icon Path
+        name: icon_path
+        widget: string
+        hint: 'Advanced: raw SVG path data — do not edit unless you know what this is.'
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+    - label: Why Checklist
+      name: why_checklist
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: badminton-courts
+    label: Badminton Courts
+    file: content/badminton-courts.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Crumb Label
+      name: crumb_label
+      widget: string
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Trust Stats
+      name: trust_stats
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Spec Table 1
+      name: spec_table_1
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Table 2
+      name: spec_table_2
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Quote Need Table
+      name: quote_need_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Eyebrow
+      name: spec_eyebrow
+      widget: string
+    - label: Spec Heading
+      name: spec_heading
+      widget: string
+    - label: Spec Intro
+      name: spec_intro
+      widget: text
+    - label: Gallery Eyebrow
+      name: gallery_eyebrow
+      widget: string
+    - label: Gallery Heading
+      name: gallery_heading
+      widget: string
+    - label: Gallery Intro
+      name: gallery_intro
+      widget: string
+    - label: Gallery
+      name: gallery
+      widget: list
+      fields:
+      - label: Src
+        name: src
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Caption
+        name: caption
+        widget: string
+    - label: Quote Eyebrow
+      name: quote_eyebrow
+      widget: string
+    - label: Quote Heading
+      name: quote_heading
+      widget: string
+    - label: Quote Text
+      name: quote_text
+      widget: text
+    - label: Quote Checklist
+      name: quote_checklist
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Faq Eyebrow
+      name: faq_eyebrow
+      widget: string
+    - label: Faq Heading
+      name: faq_heading
+      widget: string
+    - label: Faqs
+      name: faqs
+      widget: list
+      fields:
+      - label: Q
+        name: q
+        widget: string
+      - label: A Paragraphs
+        name: a_paragraphs
+        widget: list
+        field:
+          label: Item
+          name: item
+          widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string
+  - name: basketball-courts
+    label: Basketball Courts
+    file: content/basketball-courts.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Crumb Label
+      name: crumb_label
+      widget: string
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Trust Stats
+      name: trust_stats
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Spec Table 1
+      name: spec_table_1
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Table 2
+      name: spec_table_2
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Quote Need Table
+      name: quote_need_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Eyebrow
+      name: spec_eyebrow
+      widget: string
+    - label: Spec Heading
+      name: spec_heading
+      widget: string
+    - label: Spec Intro
+      name: spec_intro
+      widget: text
+    - label: Gallery Eyebrow
+      name: gallery_eyebrow
+      widget: string
+    - label: Gallery Heading
+      name: gallery_heading
+      widget: string
+    - label: Gallery Intro
+      name: gallery_intro
+      widget: string
+    - label: Gallery
+      name: gallery
+      widget: list
+      fields:
+      - label: Src
+        name: src
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Caption
+        name: caption
+        widget: string
+    - label: Quote Eyebrow
+      name: quote_eyebrow
+      widget: string
+    - label: Quote Heading
+      name: quote_heading
+      widget: string
+    - label: Quote Text
+      name: quote_text
+      widget: text
+    - label: Quote Checklist
+      name: quote_checklist
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Faq Eyebrow
+      name: faq_eyebrow
+      widget: string
+    - label: Faq Heading
+      name: faq_heading
+      widget: string
+    - label: Faqs
+      name: faqs
+      widget: list
+      fields:
+      - label: Q
+        name: q
+        widget: string
+      - label: A Paragraphs
+        name: a_paragraphs
+        widget: list
+        field:
+          label: Item
+          name: item
+          widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string
+  - name: blog-post
+    label: Blog Post
+    file: content/blog-post.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Crumb Label
+      name: crumb_label
+      widget: string
+    - label: Category
+      name: category
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Author
+      name: author
+      widget: string
+    - label: Published
+      name: published
+      widget: string
+    - label: Read Time
+      name: read_time
+      widget: string
+    - label: Article Body Html
+      name: article_body_html
+      widget: text
+      hint: 'Advanced: this field holds raw HTML for formatting. Edit text carefully and keep the tags intact.'
+    - label: Gallery Image
+      name: gallery_image
+      widget: image
+    - label: Gallery Alt
+      name: gallery_alt
+      widget: string
+    - label: Gallery Caption
+      name: gallery_caption
+      widget: string
+    - label: Article Body Html 2
+      name: article_body_html_2
+      widget: text
+    - label: Download Title
+      name: download_title
+      widget: string
+    - label: Download Note
+      name: download_note
+      widget: string
+    - label: Related Eyebrow
+      name: related_eyebrow
+      widget: string
+    - label: Related Heading
+      name: related_heading
+      widget: string
+    - label: Related Posts
+      name: related_posts
+      widget: list
+      fields:
+      - label: Href
+        name: href
+        widget: string
+      - label: Image
+        name: image
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Meta
+        name: meta
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: More Label
+        name: more_label
+        widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: blog
+    label: Blog
+    file: content/blog.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Grid Eyebrow
+      name: grid_eyebrow
+      widget: string
+    - label: Grid Heading
+      name: grid_heading
+      widget: string
+    - label: Posts
+      name: posts
+      widget: list
+      fields:
+      - label: Href
+        name: href
+        widget: string
+      - label: Image
+        name: image
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Meta
+        name: meta
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+      - label: More Label
+        name: more_label
+        widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string
+  - name: contact
+    label: Contact
+    file: content/contact.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Office Hours
+      name: office_hours
+      widget: string
+    - label: Map Placeholder Text
+      name: map_placeholder_text
+      widget: text
+    - label: Brochure Title
+      name: brochure_title
+      widget: string
+    - label: Brochure Note
+      name: brochure_note
+      widget: string
+    - label: Service Area Eyebrow
+      name: service_area_eyebrow
+      widget: string
+    - label: Service Area Heading
+      name: service_area_heading
+      widget: string
+    - label: Service Area Intro
+      name: service_area_intro
+      widget: text
+    - label: Service Area List
+      name: service_area_list
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Service Area Note
+      name: service_area_note
+      widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: faq
+    label: Faq
+    file: content/faq.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Groups
+      name: groups
+      widget: list
+      fields:
+      - label: Number
+        name: number
+        widget: string
+      - label: Heading
+        name: heading
+        widget: string
+      - label: Faqs
+        name: faqs
+        widget: list
+        fields:
+        - label: Q
+          name: q
+          widget: string
+        - label: A Paragraphs
+          name: a_paragraphs
+          widget: list
+          field:
+            label: Item
+            name: item
+            widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string
+  - name: football-turf
+    label: Football Turf
+    file: content/football-turf.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Crumb Label
+      name: crumb_label
+      widget: string
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Trust Stats
+      name: trust_stats
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Spec Table 1
+      name: spec_table_1
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Table 2
+      name: spec_table_2
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Quote Need Table
+      name: quote_need_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Eyebrow
+      name: spec_eyebrow
+      widget: string
+    - label: Spec Heading
+      name: spec_heading
+      widget: string
+    - label: Spec Intro
+      name: spec_intro
+      widget: text
+    - label: Gallery Eyebrow
+      name: gallery_eyebrow
+      widget: string
+    - label: Gallery Heading
+      name: gallery_heading
+      widget: string
+    - label: Gallery Intro
+      name: gallery_intro
+      widget: string
+    - label: Gallery
+      name: gallery
+      widget: list
+      fields:
+      - label: Src
+        name: src
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Caption
+        name: caption
+        widget: string
+    - label: Quote Eyebrow
+      name: quote_eyebrow
+      widget: string
+    - label: Quote Heading
+      name: quote_heading
+      widget: string
+    - label: Quote Text
+      name: quote_text
+      widget: text
+    - label: Quote Checklist
+      name: quote_checklist
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Faq Eyebrow
+      name: faq_eyebrow
+      widget: string
+    - label: Faq Heading
+      name: faq_heading
+      widget: string
+    - label: Faqs
+      name: faqs
+      widget: list
+      fields:
+      - label: Q
+        name: q
+        widget: string
+      - label: A Paragraphs
+        name: a_paragraphs
+        widget: list
+        field:
+          label: Item
+          name: item
+          widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: index
+    label: Index
+    file: content/index.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Hero Meta Tags
+      name: hero_meta_tags
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Trust Stats
+      name: trust_stats
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: number
+        default: 12
+      - label: Suffix
+        name: suffix
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Services Eyebrow
+      name: services_eyebrow
+      widget: string
+    - label: Services Heading
+      name: services_heading
+      widget: string
+    - label: Services Intro
+      name: services_intro
+      widget: text
+    - label: Services
+      name: services
+      widget: list
+      fields:
+      - label: Number
+        name: number
+        widget: string
+      - label: Icon Path
+        name: icon_path
+        widget: string
+        hint: 'Advanced: raw SVG path data — do not edit unless you know what this is.'
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+    - label: Standards Lead
+      name: standards_lead
+      widget: string
+    - label: Standards Badges
+      name: standards_badges
+      widget: list
+      fields:
+      - label: Code
+        name: code
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Statement Eyebrow
+      name: statement_eyebrow
+      widget: string
+    - label: Statement Quote
+      name: statement_quote
+      widget: string
+    - label: Statement Paragraphs
+      name: statement_paragraphs
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Projects Eyebrow
+      name: projects_eyebrow
+      widget: string
+    - label: Projects Heading
+      name: projects_heading
+      widget: string
+    - label: Projects Intro
+      name: projects_intro
+      widget: string
+    - label: Featured Projects
+      name: featured_projects
+      widget: list
+      fields:
+      - label: Sport
+        name: sport
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Meta
+        name: meta
+        widget: string
+      - label: Image
+        name: image
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+    - label: Clients Eyebrow
+      name: clients_eyebrow
+      widget: string
+    - label: Clients Heading
+      name: clients_heading
+      widget: string
+    - label: Client Logos
+      name: client_logos
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Reviews Eyebrow
+      name: reviews_eyebrow
+      widget: string
+    - label: Reviews Heading
+      name: reviews_heading
+      widget: string
+    - label: Reviews Note
+      name: reviews_note
+      widget: string
+    - label: Reviews
+      name: reviews
+      widget: list
+      fields:
+      - label: Text
+        name: text
+        widget: text
+      - label: Name
+        name: name
+        widget: string
+      - label: Role
+        name: role
+        widget: string
+    - label: Process Eyebrow
+      name: process_eyebrow
+      widget: string
+    - label: Process Heading
+      name: process_heading
+      widget: string
+    - label: Process Intro
+      name: process_intro
+      widget: string
+    - label: Process Steps
+      name: process_steps
+      widget: list
+      fields:
+      - label: Number
+        name: number
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: maintenance
+    label: Maintenance
+    file: content/maintenance.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Plans Eyebrow
+      name: plans_eyebrow
+      widget: string
+    - label: Plans Heading
+      name: plans_heading
+      widget: string
+    - label: Plans Intro
+      name: plans_intro
+      widget: text
+    - label: Plans
+      name: plans
+      widget: list
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Featured
+        name: featured
+        widget: boolean
+        default: false
+      - label: Price
+        name: price
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Items
+        name: items
+        widget: list
+        field:
+          label: Item
+          name: item
+          widget: string
+    - label: Plans Note
+      name: plans_note
+      widget: text
+    - label: Care Eyebrow
+      name: care_eyebrow
+      widget: string
+    - label: Care Heading
+      name: care_heading
+      widget: string
+    - label: Care Intro
+      name: care_intro
+      widget: string
+    - label: Care Table
+      name: care_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Kill Heading
+      name: kill_heading
+      widget: string
+    - label: Kill Items
+      name: kill_items
+      widget: list
+      fields:
+      - label: Bold
+        name: bold
+        widget: string
+      - label: Text
+        name: text
+        widget: text
+    - label: Warranty Eyebrow
+      name: warranty_eyebrow
+      widget: string
+    - label: Warranty Heading
+      name: warranty_heading
+      widget: string
+    - label: Warranty Intro
+      name: warranty_intro
+      widget: text
+    - label: Warranty Table
+      name: warranty_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Covered Heading
+      name: covered_heading
+      widget: string
+    - label: Covered Text
+      name: covered_text
+      widget: text
+    - label: Not Covered Heading
+      name: not_covered_heading
+      widget: string
+    - label: Not Covered Text
+      name: not_covered_text
+      widget: text
+    - label: Valid Heading
+      name: valid_heading
+      widget: string
+    - label: Valid Text
+      name: valid_text
+      widget: text
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: pickleball-courts
+    label: Pickleball Courts
+    file: content/pickleball-courts.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Crumb Label
+      name: crumb_label
+      widget: string
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Trust Stats
+      name: trust_stats
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Spec Table 1
+      name: spec_table_1
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Table 2
+      name: spec_table_2
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Quote Need Table
+      name: quote_need_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Eyebrow
+      name: spec_eyebrow
+      widget: string
+    - label: Spec Heading
+      name: spec_heading
+      widget: string
+    - label: Spec Intro
+      name: spec_intro
+      widget: text
+    - label: Gallery Eyebrow
+      name: gallery_eyebrow
+      widget: string
+    - label: Gallery Heading
+      name: gallery_heading
+      widget: string
+    - label: Gallery Intro
+      name: gallery_intro
+      widget: string
+    - label: Gallery
+      name: gallery
+      widget: list
+      fields:
+      - label: Src
+        name: src
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Caption
+        name: caption
+        widget: string
+    - label: Quote Eyebrow
+      name: quote_eyebrow
+      widget: string
+    - label: Quote Heading
+      name: quote_heading
+      widget: string
+    - label: Quote Text
+      name: quote_text
+      widget: text
+    - label: Quote Checklist
+      name: quote_checklist
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Faq Eyebrow
+      name: faq_eyebrow
+      widget: string
+    - label: Faq Heading
+      name: faq_heading
+      widget: string
+    - label: Faqs
+      name: faqs
+      widget: list
+      fields:
+      - label: Q
+        name: q
+        widget: string
+      - label: A Paragraphs
+        name: a_paragraphs
+        widget: list
+        field:
+          label: Item
+          name: item
+          widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string
+  - name: projects
+    label: Projects
+    file: content/projects.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Projects
+      name: projects
+      widget: list
+      fields:
+      - label: Sport
+        name: sport
+        widget: string
+      - label: Type
+        name: type
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Meta
+        name: meta
+        widget: string
+      - label: Image
+        name: image
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+    - label: Ba Eyebrow
+      name: ba_eyebrow
+      widget: string
+    - label: Ba Heading
+      name: ba_heading
+      widget: string
+    - label: Ba Intro
+      name: ba_intro
+      widget: string
+    - label: Ba Before Image
+      name: ba_before_image
+      widget: image
+    - label: Ba Before Alt
+      name: ba_before_alt
+      widget: string
+    - label: Ba After Image
+      name: ba_after_image
+      widget: image
+    - label: Ba After Alt
+      name: ba_after_alt
+      widget: string
+    - label: Case Studies
+      name: case_studies
+      widget: list
+      fields:
+      - label: Eyebrow
+        name: eyebrow
+        widget: string
+      - label: Heading
+        name: heading
+        widget: string
+      - label: Meta
+        name: meta
+        widget: string
+      - label: Dark
+        name: dark
+        widget: boolean
+        default: false
+      - label: Columns
+        name: columns
+        widget: list
+        fields:
+        - label: Heading
+          name: heading
+          widget: string
+        - label: Text
+          name: text
+          widget: text
+        - label: Items
+          name: items
+          widget: list
+          field:
+            label: Item
+            name: item
+            widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string
+  - name: services
+    label: Services
+    file: content/services.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Sports Eyebrow
+      name: sports_eyebrow
+      widget: string
+    - label: Sports Heading
+      name: sports_heading
+      widget: string
+    - label: Sports Intro
+      name: sports_intro
+      widget: text
+    - label: Sport Cards
+      name: sport_cards
+      widget: list
+      fields:
+      - label: Number
+        name: number
+        widget: string
+      - label: Href
+        name: href
+        widget: string
+      - label: Icon Path
+        name: icon_path
+        widget: string
+        hint: 'Advanced: raw SVG path data — do not edit unless you know what this is.'
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Cta
+        name: cta
+        widget: string
+    - label: Beneath Eyebrow
+      name: beneath_eyebrow
+      widget: string
+    - label: Beneath Heading
+      name: beneath_heading
+      widget: string
+    - label: Beneath Intro
+      name: beneath_intro
+      widget: string
+    - label: Beneath Columns
+      name: beneath_columns
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: text
+  - name: tennis-courts
+    label: Tennis Courts
+    file: content/tennis-courts.njk
+    fields:
+    - label: Title
+      name: title
+      widget: string
+    - label: Description
+      name: description
+      widget: text
+    - label: Crumb Label
+      name: crumb_label
+      widget: string
+    - label: Hero Eyebrow
+      name: hero_eyebrow
+      widget: string
+    - label: Hero Heading
+      name: hero_heading
+      widget: string
+    - label: Hero Sub
+      name: hero_sub
+      widget: text
+    - label: Trust Stats
+      name: trust_stats
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+    - label: Spec Table 1
+      name: spec_table_1
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Table 2
+      name: spec_table_2
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Quote Need Table
+      name: quote_need_table
+      widget: object
+      fields:
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Rows
+        name: rows
+        widget: list
+        fields:
+        - label: Item
+          name: item
+          widget: string
+        - label: Spec
+          name: spec
+          widget: string
+    - label: Spec Eyebrow
+      name: spec_eyebrow
+      widget: string
+    - label: Spec Heading
+      name: spec_heading
+      widget: string
+    - label: Spec Intro
+      name: spec_intro
+      widget: text
+    - label: Gallery Eyebrow
+      name: gallery_eyebrow
+      widget: string
+    - label: Gallery Heading
+      name: gallery_heading
+      widget: string
+    - label: Gallery Intro
+      name: gallery_intro
+      widget: string
+    - label: Gallery
+      name: gallery
+      widget: list
+      fields:
+      - label: Src
+        name: src
+        widget: image
+      - label: Alt
+        name: alt
+        widget: string
+      - label: Caption
+        name: caption
+        widget: string
+    - label: Quote Eyebrow
+      name: quote_eyebrow
+      widget: string
+    - label: Quote Heading
+      name: quote_heading
+      widget: string
+    - label: Quote Text
+      name: quote_text
+      widget: text
+    - label: Quote Checklist
+      name: quote_checklist
+      widget: list
+      field:
+        label: Item
+        name: item
+        widget: string
+    - label: Faq Eyebrow
+      name: faq_eyebrow
+      widget: string
+    - label: Faq Heading
+      name: faq_heading
+      widget: string
+    - label: Faqs
+      name: faqs
+      widget: list
+      fields:
+      - label: Q
+        name: q
+        widget: string
+      - label: A Paragraphs
+        name: a_paragraphs
+        widget: list
+        field:
+          label: Item
+          name: item
+          widget: string
+    - label: Cta Heading
+      name: cta_heading
+      widget: string
+    - label: Cta Text
+      name: cta_text
+      widget: string

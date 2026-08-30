@@ -1,0 +1,30 @@
+---
+layout: base.njk
+permalink: /404.html
+title: "Page not found — Inter Sports Infra LLP"
+description: "Page not found"
+robots: "noindex"
+
+heading: "Out of Bounds"
+text: "This page isn't on the court. The line you followed may be out of date — but the ground, the track and the surface are all still here."
+---
+<section class="nf">
+  <svg class="nf__court" data-draw viewBox="0 0 400 400" fill="none" aria-hidden="true">
+    <path d="M40 0V400" stroke="#2a2e33" stroke-width="7"/>
+    <path d="M0 360H400" stroke="#2a2e33" stroke-width="7"/>
+    <path d="M40 200A160 160 0 0 1 200 360" stroke="#4D8CD4" stroke-width="7"/>
+    <circle cx="270" cy="180" r="24" stroke="#4D8CD4" stroke-width="7"/>
+  </svg>
+  <div class="nf__inner">
+    <b>4<i>0</i>4</b>
+    <h1>{{ heading }}</h1>
+    <p>{{ text }}</p>
+    <div class="nf__cta">
+      <a class="btn btn--primary" href="/">
+        Back to Home
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="/contact/">Contact Us</a>
+    </div>
+  </div>
+</section>

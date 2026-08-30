@@ -1,0 +1,118 @@
+---
+layout: base.njk
+nav: faq
+permalink: /faq/index.html
+title: FAQ — Sports Surface Questions Answered | Inter Sports Infra LLP
+description: Cost factors, timelines, durability and maintenance questions answered straight, before you sign a contract.
+hero_eyebrow: Questions
+hero_heading: Straight<br><em>Answers</em>
+hero_sub: The questions we are asked before every contract, answered the way we answer them on site — including the ones where the honest answer costs us the upsell.
+groups:
+- number: '01'
+  heading: Cost factors
+  faqs:
+  - q: What does a sports surface actually cost?
+    a_paragraphs:
+    - Cost per square metre varies by a factor of five across surfaces, so any number without a specification attached is meaningless. An acrylic pickleball court and a full-PU athletics track are not comparable.
+    - 'What we can tell you: on a raw-soil site, expect roughly 55–70% of the total to be civil work and drainage, not the surface. Quotes that are cheap usually cut there.'
+  - q: Why are two quotes for "the same turf" so far apart?
+    a_paragraphs:
+    - Almost always the base. One quote includes excavation, graded sub-base, compaction testing and drainage; the other assumes your ground is ready and will raise a variation once work starts.
+    - Compare the build-up section, not the headline. Ask both contractors for pile height, dtex, shock pad thickness and sub-base depth in writing.
+  - q: Can we phase the work to spread the cost?
+    a_paragraphs:
+    - Yes, and it is often sensible. Base and drainage in one financial year, surface in the next. A properly built base can sit exposed for months.
+    - What we advise against is phasing the surface itself — a half-coated court wears unevenly and the joint always shows.
+  - q: Do you work with school and government budgets?
+    a_paragraphs:
+    - Yes. We quote against tender specifications and can provide the itemised BOQ format most institutions require. We will also flag where a tender specification is internally contradictory before you publish it.
+- number: '02'
+  heading: Timelines
+  faqs:
+  - q: How long from order to first game?
+    a_paragraphs:
+    - 'On a prepared, level base: two to three weeks for most courts. On raw ground: five to eight weeks, because excavation, sub-base and curing cannot be rushed.'
+    - An athletics track or a full-size football pitch runs longer — eight to fourteen weeks depending on site access.
+  - q: Does the monsoon stop work?
+    a_paragraphs:
+    - It stops civil work and acrylic coating; it does not stop turf laying or indoor installation. We schedule base work outside the monsoon window and use the wet weeks for indoor jobs.
+    - If your deadline is fixed, tell us early — sequence matters more than crew size.
+  - q: How much notice do you need to start?
+    a_paragraphs:
+    - Typically two to three weeks from a signed order, longer in October to February when demand peaks. Imported turf and vinyl can carry a four to six week lead time, so we confirm stock before committing to a date.
+- number: '03'
+  heading: Durability
+  faqs:
+  - q: How many years will the surface last?
+    a_paragraphs:
+    - 'Artificial turf: eight to ten years recreational, six to seven under heavy academy use. Acrylic: recoat every four to six years, base lasts decades. Indoor vinyl: ten to fifteen years. Wooden sprung floor: twenty-five years or more with refinishing.'
+    - The base beneath all of them outlives two surface replacements if it was built correctly.
+  - q: What fails first, and why?
+    a_paragraphs:
+    - Drainage. Water that cannot leave sits under the surface, softens the base and lifts seams or delaminates coating. Nearly every surface failure we are called to inspect is a water problem wearing a material costume.
+  - q: Will the colour fade?
+    a_paragraphs:
+    - Some fade is normal and covered by the published UV figure. Good monofilament yarn and pigmented acrylic hold colour for years; cheap yarn goes grey in two summers, which is why we name the dtex and the warranty on the quote.
+- number: '04'
+  heading: Maintenance
+  faqs:
+  - q: How much maintenance does it really need?
+    a_paragraphs:
+    - Less than natural grass, more than nothing. Turf needs weekly brushing and an annual infill top-up. Acrylic needs sweeping and a recoat every few years. Indoor vinyl needs daily dry mopping and never wax.
+    - Full detail, plus AMC tiers, is on the <a href="/maintenance/">Maintenance page</a>.
+  - q: Is an AMC compulsory?
+    a_paragraphs:
+    - Not with us. But most surface warranties — ours and the manufacturers' — require documented annual maintenance. You can do it yourself and keep records, or contract it to us. What voids a claim is having neither.
+  - q: Can you maintain a surface another contractor built?
+    a_paragraphs:
+    - Yes, and we do it often. We inspect first and give you a written condition report before quoting, including telling you if the surface is beyond economic maintenance.
+cta_heading: Still Have a Question?
+cta_text: WhatsApp it to us with a photograph of your site. You will get an answer, not a brochure.
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M70 60A360 360 0 0 1 430 420" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1080" cy="190" r="110" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>FAQ</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+    <div class="phero__cta rv rv-d3"><a class="btn btn--primary" href="/contact/">Ask Us Something Else <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a></div>
+  </div>
+</section>
+
+{% for g in groups %}
+{% set slugs = ["cost","time","dur","maint"] %}
+{% set gslug = slugs[loop.index0] if loop.index0 < 4 else "g" + loop.index0|string %}
+<section class="sec{% if loop.index0 % 2 == 1 %} sec--chalk{% endif %}">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ g.number }}</p><h2 class="rv">{{ g.heading }}</h2></div>
+    </div>
+    <div class="acc">
+      {% for f in g.faqs %}
+      <div class="acc__item">
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="{{ gslug }}-p{{ loop.index0 }}" id="{{ gslug }}-b{{ loop.index0 }}">{{ f.q }}</button></h3>
+        <div class="acc__panel" id="{{ gslug }}-p{{ loop.index0 }}" role="region" aria-labelledby="{{ gslug }}-b{{ loop.index0 }}"><div>{% for para in f.a_paragraphs %}<p>{{ para | safe }}</p>{% endfor %}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>

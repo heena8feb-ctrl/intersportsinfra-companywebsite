@@ -1,0 +1,100 @@
+---
+layout: base.njk
+nav: blog
+permalink: /blog/index.html
+title: "Resources — Guides on Sports Surfaces | Inter Sports Infra LLP"
+description: "Guides on specifying, costing and maintaining sports surfaces — written for facility owners, architects and school committees."
+
+hero_eyebrow: "Resources"
+hero_heading: "What We'd Tell You<br>Over <em>Chai</em>"
+hero_sub: "Guides on specifying, costing and maintaining sports surfaces — written for facility owners, architects and school committees rather than for search engines."
+
+grid_eyebrow: "Latest"
+grid_heading: "Guides & Explainers"
+posts:
+  - href: "/blog-post/"
+    image: "/images/blog-1-photo-flat-lay-of-a-quotation-document.jpg"
+    alt: "Photo — flat-lay of a quotation document"
+    meta: "Buying guide · 6 min"
+    title: "How to Read a Sports Surface Quote"
+    description: "Four line items that tell you whether a quote is honest — and the one omission that predicts a variation claim."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-2-photo-water-draining-off-a-court-edge.jpg"
+    alt: "Photo — water draining off a court edge"
+    meta: "Technical · 8 min"
+    title: "Why Indian Courts Fail in the Monsoon"
+    description: "Drainage, not material, causes most surface failures. What a 1:100 cross fall actually means on site."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-3-photo-pickleball-court-from-above.jpg"
+    alt: "Photo — pickleball court from above"
+    meta: "Planning · 5 min"
+    title: "Pickleball in India: Sizing Your Plot"
+    description: "The difference between the 13.41 m court and the 18.29 m you actually need — and how to fit four in a tennis enclosure."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-4-photo-turf-pile-and-infill-macro.jpg"
+    alt: "Photo — turf pile and infill macro"
+    meta: "Technical · 7 min"
+    title: "Turf Pile Height, Dtex and Infill"
+    description: "What the numbers on a turf datasheet mean, and which ones matter for football versus hockey."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-5-photo-squeegee-applying-acrylic-coat.jpg"
+    alt: "Photo — squeegee applying acrylic coat"
+    meta: "Technical · 5 min"
+    title: "Acrylic Coats: Why Eight, Not Four"
+    description: "Each coat has a job. Cutting the resurfacer coats is the most common invisible saving."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-6-photo-school-ground-under-construction.jpg"
+    alt: "Photo — school ground under construction"
+    meta: "Planning · 6 min"
+    title: "Budgeting a School Ground Over Two Years"
+    description: "Phasing base and surface across financial years without compromising the finished court."
+    more_label: "Read the guide"
+
+cta_heading: "Want a Topic Covered?"
+cta_text: "Tell us what you could not find an answer to online and we will write it up."
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M70 60A360 360 0 0 1 430 420" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1080" cy="190" r="110" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Resources</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ grid_eyebrow }}</p><h2 class="rv">{{ grid_heading }}</h2></div>
+    </div>
+    <div class="posts">
+      {% for p in posts %}
+      {% set _d = loop.index0 % 3 %}
+      <a class="post rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="{{ p.href }}"><img class="ph" src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy"><div class="post__body"><p class="post__meta">{{ p.meta }}</p><h3>{{ p.title }}</h3><p>{{ p.description }}</p><span class="post__more">{{ p.more_label }} <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></span></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>

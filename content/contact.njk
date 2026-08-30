@@ -1,0 +1,207 @@
+---
+layout: base.njk
+nav: contact
+permalink: /contact/index.html
+title: "Contact — Get a Quote | Inter Sports Infra LLP"
+description: "Send the sport, location and plot size and get a layout plus indicative cost within three working days. Call, WhatsApp or use the form."
+
+hero_eyebrow: "Get in touch"
+hero_heading: "Tell Us About<br>Your <em>Ground</em>"
+hero_sub: "Four short steps. Send the sport, the location and the plot size and you will have a layout plus an indicative cost within three working days — or call us and skip the form."
+
+office_hours: "Mon–Sat, 9:30 – 18:30 IST"
+map_placeholder_text: "Google Map embed<br>goes here<br><br>Replace this block with your<br>Maps iframe or Business Profile"
+brochure_title: "Company Brochure"
+brochure_note: "PDF placeholder — attach the file"
+
+service_area_eyebrow: "Where we work"
+service_area_heading: "Service Area"
+service_area_intro: "Based in Faridabad, with regional bases in four cities. We travel for projects above 500 sq m."
+service_area_list:
+  - "Faridabad & Ballabhgarh"
+  - "New Delhi"
+  - "Gurugram"
+  - "Noida & Greater Noida"
+  - "Ghaziabad"
+  - "Sonipat & Panipat"
+  - "Mumbai & Navi Mumbai"
+  - "Pune"
+  - "Bangalore"
+  - "Hyderabad"
+  - "Guwahati & North East"
+  - "Chandigarh & Punjab"
+service_area_note: "Outside these? Ask anyway — we mobilise nationally for larger contracts."
+
+cta_heading: "Prefer to Just Talk?"
+cta_text: "Call or WhatsApp between 9:30 and 18:30. You will reach someone who has been on a site, not a call centre."
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M70 60A360 360 0 0 1 430 420" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1080" cy="190" r="110" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Contact</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+    <div class="phero__cta rv rv-d3"><a class="btn btn--primary" href="tel:{{ site.phone_link }}">Call {{ site.phone_display }}</a><a class="btn btn--ghost" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cols" style="grid-template-columns:1.35fr 1fr">
+
+      <form class="form rv" data-multistep novalidate>
+        <ol class="form__steps">
+          <li data-on="true"><b>01</b> Sport</li>
+          <li data-on="false"><b>02</b> Site</li>
+          <li data-on="false"><b>03</b> Timeline</li>
+          <li data-on="false"><b>04</b> You</li>
+        </ol>
+
+        <fieldset>
+          <legend>What are we building?</legend>
+          <div class="field">
+            <span>Sport / surface</span>
+            <div class="chips">
+              <label><input type="radio" name="sport" value="Football turf" required><span>Football turf</span></label>
+              <label><input type="radio" name="sport" value="Pickleball"><span>Pickleball</span></label>
+              <label><input type="radio" name="sport" value="Badminton"><span>Badminton</span></label>
+              <label><input type="radio" name="sport" value="Basketball"><span>Basketball</span></label>
+              <label><input type="radio" name="sport" value="Tennis"><span>Tennis</span></label>
+              <label><input type="radio" name="sport" value="Running track"><span>Running track</span></label>
+              <label><input type="radio" name="sport" value="Other"><span>Something else</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <span>New build or renovation</span>
+            <div class="chips">
+              <label><input type="radio" name="type" value="New build"><span>New build</span></label>
+              <label><input type="radio" name="type" value="Renovation"><span>Renovation</span></label>
+              <label><input type="radio" name="type" value="Not sure"><span>Not sure yet</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset hidden>
+          <legend>Where is the site?</legend>
+          <div class="field--row">
+            <label class="field"><span>City</span><input type="text" name="city" placeholder="e.g. Faridabad" required></label>
+            <label class="field"><span>State</span><input type="text" name="state" placeholder="e.g. Haryana"></label>
+          </div>
+          <div class="field--row">
+            <label class="field"><span>Plot size (metres)</span><input type="text" name="plot" placeholder="e.g. 40 × 20" required></label>
+            <label class="field"><span>Number of courts</span><input type="number" name="courts" min="1" placeholder="1"></label>
+          </div>
+          <label class="field"><span>Existing ground condition</span>
+            <select name="ground">
+              <option value="">Select one</option>
+              <option>Raw soil / open ground</option>
+              <option>Existing concrete slab</option>
+              <option>Existing sports surface</option>
+              <option>Indoor hall floor</option>
+              <option>Rooftop</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset hidden>
+          <legend>When do you need it?</legend>
+          <div class="field">
+            <span>Target timeline</span>
+            <div class="chips">
+              <label><input type="radio" name="timeline" value="ASAP"><span>As soon as possible</span></label>
+              <label><input type="radio" name="timeline" value="1-3 months"><span>1–3 months</span></label>
+              <label><input type="radio" name="timeline" value="3-6 months"><span>3–6 months</span></label>
+              <label><input type="radio" name="timeline" value="Planning only"><span>Planning / budgeting</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <span>Also needed</span>
+            <div class="chips">
+              <label><input type="checkbox" name="extras" value="Fencing"><span>Fencing</span></label>
+              <label><input type="checkbox" name="extras" value="Floodlighting"><span>Floodlighting</span></label>
+              <label><input type="checkbox" name="extras" value="Seating"><span>Seating</span></label>
+              <label><input type="checkbox" name="extras" value="Equipment"><span>Nets / posts / hoops</span></label>
+              <label><input type="checkbox" name="extras" value="AMC"><span>Maintenance contract</span></label>
+            </div>
+          </div>
+          <label class="field"><span>Anything else we should know</span><textarea name="notes" placeholder="Drainage problems, tender deadlines, access restrictions…"></textarea></label>
+        </fieldset>
+
+        <fieldset hidden>
+          <legend>How do we reach you?</legend>
+          <div class="field--row">
+            <label class="field"><span>Your name</span><input type="text" name="name" required></label>
+            <label class="field"><span>Organisation</span><input type="text" name="org" placeholder="School, club, builder…"></label>
+          </div>
+          <div class="field--row">
+            <label class="field"><span>Phone / WhatsApp</span><input type="tel" name="phone" required placeholder="+91"></label>
+            <label class="field"><span>Email</span><input type="email" name="email" required></label>
+          </div>
+          <p class="form__note">We reply within one working day. We do not sell or share your details.</p>
+        </fieldset>
+
+        <div class="form__nav">
+          <button class="btn btn--dark" type="button" data-prev>Back</button>
+          <button class="btn btn--primary" type="button" data-next>Next <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button class="btn btn--primary" type="submit">Send Request <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+
+        <div class="form__done">
+          <h3>Request Received</h3>
+          <p>Thank you — we will come back within one working day, usually with two or three questions about levels and access before we quote.</p>
+          <p class="form__note">Demo form: this static page does not post anywhere yet. Connect it to Netlify Forms by adding <code>netlify</code> to the form tag, or point it at your own email handler.</p>
+        </div>
+      </form>
+
+      <div>
+        <div class="rail rv rv-d1">
+          <a href="tel:{{ site.phone_link }}"><span>Call us</span><b>{{ site.phone_display }}</b></a>
+          <a href="mailto:{{ site.email }}"><span>Email</span><b>{{ site.email }}</b></a>
+          <a href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener"><span>WhatsApp</span><b>Click to chat</b></a>
+          <div><span>Registered office</span><b style="font-family:var(--body);font-size:15.5px;line-height:1.55">{{ site.address_line1 }}<br>{{ site.address_line2 }}</b></div>
+          <div><span>Office hours</span><b style="font-size:15.5px">{{ office_hours }}</b></div>
+        </div>
+
+        <div class="map rv rv-d2" style="margin-top:22px">
+          <p>{{ map_placeholder_text | safe }}</p>
+        </div>
+
+        <a class="dl rv rv-d3" href="#" style="margin-top:22px">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+          <div><b>{{ brochure_title }}</b><span>{{ brochure_note }}</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--chalk">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ service_area_eyebrow }}</p><h2 class="rv">{{ service_area_heading }}</h2></div>
+      <p class="rv rv-d1">{{ service_area_intro }}</p>
+    </div>
+    <ul class="areas rv rv-d1">
+      {% for area in service_area_list %}<li>{{ area }}</li>{% endfor %}
+    </ul>
+    <p class="form__note">{{ service_area_note }}</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,139 @@
+---
+layout: base.njk
+nav: services
+permalink: /services/index.html
+title: "Services — Sports Surfaces & Civil Construction | Inter Sports Infra LLP"
+description: "Football turf, pickleball, badminton, basketball and tennis courts, running tracks, sports civil construction and maintenance — all under one contract."
+
+hero_eyebrow: "What we build"
+hero_heading: "Every Surface,<br>One <em>Accountable</em><br>Contractor"
+hero_sub: "Ground preparation, drainage, the surface itself, line marking and the equipment on top. We hold the whole scope, so nobody points at another vendor when something is 8 mm out."
+
+sports_eyebrow: "Sport surfaces"
+sports_heading: "Pick Your Sport"
+sports_intro: "Each surface has its own build-up, its own tolerances and its own failure modes. Open the one you need."
+sport_cards:
+  - number: "01"
+    href: "/football-turf/"
+    icon_path: "M50 12a38 38 0 1 0 0 76 38 38 0 0 0 0-76M50 30l16 12-6 19H40l-6-19z"
+    title: "Football Turf"
+    description: "FIFA-quality monofilament turf, shock pad and a base that drains. 5-a-side to full size."
+    cta: "View surface"
+  - number: "02"
+    href: "/pickleball-courts/"
+    icon_path: "M14 22h72v56H14zM14 50h72M50 22v56"
+    title: "Pickleball Courts"
+    description: "Eight-coat acrylic, regulation 13.41 × 6.10 m, kitchen line marked to ±5 mm."
+    cta: "View surface"
+  - number: "03"
+    href: "/badminton-courts/"
+    icon_path: "M20 20h60v60H20zM32 20v60M68 20v60M20 50h60"
+    title: "Badminton Courts"
+    description: "BWF-approved PVC mats and sprung wooden floors, laid over a levelled screed."
+    cta: "View surface"
+  - number: "04"
+    href: "/basketball-courts/"
+    icon_path: "M50 12a38 38 0 1 0 0 76 38 38 0 0 0 0-76M12 50h76M50 12v76M26 22a52 52 0 0 0 0 56M74 22a52 52 0 0 1 0 56"
+    title: "Basketball Courts"
+    description: "FIBA-dimension courts in acrylic, tile or hardwood — with hoops and backboards."
+    cta: "View surface"
+  - number: "05"
+    href: "/tennis-courts/"
+    icon_path: "M16 18h68v64H16zM16 50h68M50 34v32M34 18v64M66 18v64"
+    title: "Tennis Courts"
+    description: "ITF pace-rated acrylic hard courts, new build and resurfacing of tired courts."
+    cta: "View surface"
+  - number: "06"
+    href: null
+    icon_path: "M10 82h80M22 82V50a28 28 0 0 1 56 0v32M22 66h56"
+    title: "Running Tracks & More"
+    description: "Synthetic athletics tracks, EPDM play areas, multi-sport courts, gym flooring and the civil works beneath all of them."
+    cta: "Talk to us"
+
+beneath_eyebrow: "Also included"
+beneath_heading: "The Work Beneath and Around"
+beneath_intro: "Nobody photographs these. Every surface failure traces back to one of them."
+beneath_columns:
+  - - heading: "Sports civil construction"
+      text: "Excavation, cut and fill, compaction to specified density, graded sub-base, kerbs, retaining walls and foundations. We test compaction rather than assume it."
+    - heading: "Drainage design"
+      text: "Perimeter channels, sub-surface drains, cross falls set to the surface's own tolerance. In an Indian monsoon, drainage is the difference between losing a week and losing a season."
+  - - heading: "Equipment and accessories"
+      text: "Goalposts, nets, poles, hoops, seating, fencing, floodlighting and scoreboards — specified alongside the surface so heights are set from the finished floor, not the slab."
+    - heading: "Maintenance and AMC"
+      text: "Brushing, infill top-up, recoating, crack repair and annual inspection under a written contract. See the AMC tiers."
+
+cta_heading: "Not Sure Which Surface You Need?"
+cta_text: "Tell us the sport, the space and the budget. We will recommend the one that fits — including telling you when a cheaper surface is the right answer."
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M70 60A360 360 0 0 1 430 420" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1080" cy="190" r="110" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Services</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+    <div class="phero__cta rv rv-d3"><a class="btn btn--primary" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a><a class="btn btn--ghost" href="/projects/">See Our Work</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ sports_eyebrow }}</p><h2 class="rv">{{ sports_heading }}</h2></div>
+      <p class="rv rv-d1">{{ sports_intro }}</p>
+    </div>
+    <div class="cards">
+      {% for c in sport_cards %}
+      {% set _d = loop.index0 % 3 %}
+      {% if c.href %}
+      <a class="card rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="{{ c.href }}">
+      {% else %}
+      <article class="card rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}">
+      {% endif %}
+        <span class="card__n">{{ c.number }}</span>
+        <svg class="card__ico" viewBox="0 0 100 100" aria-hidden="true"><path d="{{ c.icon_path }}"/></svg>
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.description }}</p>
+        <span class="card__more">{{ c.cta }} <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></span>
+      {% if c.href %}</a>{% else %}</article>{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--chalk">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ beneath_eyebrow }}</p><h2 class="rv">{{ beneath_heading }}</h2></div>
+      <p class="rv rv-d1">{{ beneath_intro }}</p>
+    </div>
+    <div class="cols">
+      {% for col in beneath_columns %}
+      <div class="prose rv{% if loop.index0 == 1 %} rv-d1{% endif %}">
+        {% for block in col %}
+        <h3>{{ block.heading }}</h3>
+        <p>{{ block.text }}{% if block.heading == "Maintenance and AMC" %} <a href="/maintenance/">See the AMC tiers</a>.{% endif %}</p>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>

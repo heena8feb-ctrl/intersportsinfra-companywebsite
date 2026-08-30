@@ -1,0 +1,27 @@
+---
+permalink: /identity/index.html
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=/admin/" />
+  <title>Redirecting…</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <script>
+    // Same fix as /admin/index.html — must point at the Netlify site that
+    // holds Identity + Git Gateway, since this is no longer served from
+    // a *.netlify.app domain.
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+        APIUrl: "https://intersportsinfrawebsite.netlify.app/.netlify/identity"
+      });
+      window.netlifyIdentity.on("init", (user) => {
+        window.location.href = "/admin/";
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+priorities:
+  /: "1.0"
+  /services/: "0.9"
+  /football-turf/: "0.9"
+  /pickleball-courts/: "0.9"
+  /badminton-courts/: "0.9"
+  /basketball-courts/: "0.9"
+  /tennis-courts/: "0.9"
+  /contact/: "0.9"
+  /projects/: "0.8"
+  /about/: "0.7"
+  /maintenance/: "0.7"
+  /faq/: "0.7"
+  /blog/: "0.6"
+---<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+{%- if page.url and page.url != "/404.html" and page.url != "/identity/" and not page.url.startsWith("/admin") %}
+  <url><loc>https://www.intersportsinfra.com{{ page.url }}</loc><priority>{{ priorities[page.url] or "0.5" }}</priority></url>
+{%- endif %}
+{%- endfor %}
+</urlset>

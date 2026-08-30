@@ -1,0 +1,134 @@
+---
+layout: base.njk
+nav: blog
+permalink: /blog-post/index.html
+title: "How to Read a Sports Surface Quote | Inter Sports Infra LLP"
+description: "Four line items tell you whether a quote is honest. One omission predicts a variation claim before the base is even dug."
+
+crumb_label: "Reading a quote"
+category: "Buying guide"
+hero_heading: "How to Read a<br>Sports Surface <em>Quote</em>"
+hero_sub: "Four line items tell you whether a quote is honest. One omission predicts a variation claim before the base is even dug."
+author: "[ Author name ]"
+published: "[ DD Month YYYY ]"
+read_time: "6 min read"
+
+article_body_html: |
+  <p><strong>[ This is the reusable post template. Replace the copy, keep the structure. ]</strong> Two quotes for the same court can differ by forty per cent and both can be technically accurate. The gap is almost never the surface material — it is what each contractor has assumed about the ground underneath.</p>
+
+  <h2>1. The build-up section</h2>
+  <p>Any quote worth reading names the layers from the top down, with a thickness against each. If your quote says "supply and lay artificial turf" and nothing else, you are not comparing surfaces — you are comparing optimism.</p>
+  <ul>
+    <li>Pile height and dtex for turf, coat count for acrylic</li>
+    <li>Shock pad thickness, if any</li>
+    <li>Binder course and sub-base depth</li>
+    <li>Compaction density the contractor will achieve</li>
+  </ul>
+
+  <h2>2. What is excluded</h2>
+  <p>Exclusions belong in the same type size as inclusions. The usual quiet omissions are excavation, disposal of spoil, dewatering, and drainage connection to your existing storm line.</p>
+
+  <blockquote><p>If the exclusions are in smaller type than the inclusions, read them twice.</p></blockquote>
+
+  <h2>3. The drainage line item</h2>
+  <p>Look for a cross fall figure and a perimeter drain. A quote with no drainage line on an open-ground site is a quote that intends to raise a variation, or one that has not visited the site.</p>
+
+gallery_image: "/images/blog-post-1-photo-cross-section-diagram-or-site-phot.jpg"
+gallery_alt: "Photo — cross-section diagram or site photograph"
+gallery_caption: "Placeholder — replace with a build-up section drawing or a site photograph."
+
+article_body_html_2: |
+  <h2>4. Tolerances and testing</h2>
+  <p>Line marking to ±5 mm, flatness over a 2 m straightedge, compaction to 95% Proctor. These are the numbers you can hold a contractor to at handover. Without them, "as per standard" means whatever the crew delivered on the day.</p>
+
+  <h3>What to do with all this</h3>
+  <p>Ask both contractors for the same four items in writing before you compare totals. The cheaper quote may still win — but you will know what you are giving up rather than finding out in year two.</p>
+
+download_title: "Specification Checklist"
+download_note: "Placeholder — attach the PDF here"
+
+related_eyebrow: "Keep reading"
+related_heading: "Related Guides"
+related_posts:
+  - href: "/blog-post/"
+    image: "/images/blog-post-2-photo-water-draining-off-a-court-edge.jpg"
+    alt: "Photo — water draining off a court edge"
+    meta: "Technical · 8 min"
+    title: "Why Indian Courts Fail in the Monsoon"
+    description: "Drainage, not material, causes most surface failures."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-post-3-photo-turf-pile-and-infill-macro.jpg"
+    alt: "Photo — turf pile and infill macro"
+    meta: "Technical · 7 min"
+    title: "Turf Pile Height, Dtex and Infill"
+    description: "What the numbers on a turf datasheet actually mean."
+    more_label: "Read the guide"
+  - href: "/blog-post/"
+    image: "/images/blog-post-4-photo-pickleball-court-from-above.jpg"
+    alt: "Photo — pickleball court from above"
+    meta: "Planning · 5 min"
+    title: "Pickleball in India: Sizing Your Plot"
+    description: "Court size versus the space you actually need."
+    more_label: "Read the guide"
+
+cta_heading: "Have a Site to Discuss?"
+cta_text: "Send the dimensions and the sport. You will have a layout and an indicative cost in three working days."
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Resources</a><span>/</span><span>{{ crumb_label }}</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ category }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+    <p class="artmeta rv rv-d3" style="margin-top:26px"><span>By {{ author }}</span><span>Published {{ published }}</span><span>{{ read_time }}</span></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="article">
+      {{ article_body_html | safe }}
+
+      <figure>
+        <img class="ph" src="{{ gallery_image }}" alt="{{ gallery_alt }}" loading="lazy">
+        <figcaption>{{ gallery_caption }}</figcaption>
+      </figure>
+
+      {{ article_body_html_2 | safe }}
+
+      <div class="dl" style="margin-top:14px">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+        <div><b>{{ download_title }}</b><span>{{ download_note }}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--chalk">
+  <div class="wrap">
+    <div class="sec__head"><div class="sec__label"><p class="eyebrow">{{ related_eyebrow }}</p><h2 class="rv">{{ related_heading }}</h2></div></div>
+    <div class="posts">
+      {% for p in related_posts %}
+      {% set _d = loop.index0 %}
+      <a class="post rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="{{ p.href }}"><img class="ph" src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy"><div class="post__body"><p class="post__meta">{{ p.meta }}</p><h3>{{ p.title }}</h3><p>{{ p.description }}</p><span class="post__more">{{ p.more_label }} <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></span></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>

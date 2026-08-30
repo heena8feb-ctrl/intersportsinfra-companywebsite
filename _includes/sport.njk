@@ -1,0 +1,125 @@
+---
+layout: base.njk
+---
+<section class="phero">
+  <svg class="phero__court" data-draw viewBox="0 0 1440 460" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M70 -40V500" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 420H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M70 200A220 220 0 0 1 290 420" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M70 60A360 360 0 0 1 430 420" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M1080 -40V500" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1080" cy="190" r="110" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap phero__in">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span><span>{{ crumb_label }}</span></nav>
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="rv rv-d2">{{ hero_sub }}</p>
+    <div class="phero__cta rv rv-d3"><a class="btn btn--primary" href="#quote">Get a Quote for This Surface <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a><a class="btn btn--ghost" href="/projects/">See Built Examples</a></div>
+  </div>
+</section>
+
+<section class="trust" aria-label="At a glance">
+  <div class="wrap"><ul>
+    {% for s in trust_stats %}
+    {% set _d = loop.index0 %}<li class="rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}"><b>{{ s.value }}</b><span>{{ s.label }}</span></li>
+    {% endfor %}
+  </ul></div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ spec_eyebrow }}</p><h2 class="rv">{{ spec_heading }}</h2></div>
+      <p class="rv rv-d1">{{ spec_intro }}</p>
+    </div>
+    <div class="cols">
+      <div class="rv">
+    <table class="spec">
+      <caption>{{ spec_table_1.caption }}</caption>
+      <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
+      <tbody>
+        {% for row in spec_table_1.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+      <div class="rv rv-d1">
+    <table class="spec">
+      <caption>{{ spec_table_2.caption }}</caption>
+      <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
+      <tbody>
+        {% for row in spec_table_2.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--chalk">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ gallery_eyebrow }}</p><h2 class="rv">{{ gallery_heading }}</h2></div>
+      <p class="rv rv-d1">{{ gallery_intro }}</p>
+    </div>
+    <div class="gal">
+      {% for g in gallery %}
+      <figure class="rv"><img class="ph" src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy"><figcaption>{{ g.caption }}</figcaption></figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark" id="quote">
+  <div class="wrap">
+    <div class="cols">
+      <div class="prose rv">
+        <p class="eyebrow eyebrow--on-dark">{{ quote_eyebrow }}</p>
+        <h2>{{ quote_heading }}</h2>
+        <p>{{ quote_text }}</p>
+        <ul class="list-check">
+          {% for item in quote_checklist %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+        <div class="phero__cta">
+          <a class="btn btn--primary" href="/contact/">Start a Quote Request <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a class="btn btn--ghost" href="tel:{{ site.phone_link }}">Call {{ site.phone_display }}</a>
+        </div>
+      </div>
+      <div class="rv rv-d1">
+    <table class="spec">
+      <caption>{{ quote_need_table.caption }}</caption>
+      <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
+      <tbody>
+        {% for row in quote_need_table.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label"><p class="eyebrow">{{ faq_eyebrow }}</p><h2 class="rv">{{ faq_heading }}</h2></div>
+    </div>
+    <div class="acc">
+      {% for f in faqs %}
+      <div class="acc__item">
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="{{ page.fileSlug }}-p{{ loop.index0 }}" id="{{ page.fileSlug }}-b{{ loop.index0 }}">{{ f.q }}</button></h3>
+        <div class="acc__panel" id="{{ page.fileSlug }}-p{{ loop.index0 }}" role="region" aria-labelledby="{{ page.fileSlug }}-b{{ loop.index0 }}"><div>{% for para in f.a_paragraphs %}<p>{{ para }}</p>{% endfor %}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta__row">
+    <div><h2 class="rv">{{ cta_heading }}</h2><p class="rv rv-d1">{{ cta_text }}</p></div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">Get a Free Consultation <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
