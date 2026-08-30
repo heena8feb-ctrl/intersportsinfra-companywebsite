@@ -1,8 +1,7 @@
-# Content pages use a .njk extension (Nunjucks templates), which Decap
-# doesn't auto-detect as a frontmatter format the way it does .md files.
-# "format: frontmatter" is set explicitly on EVERY file entry below
-# (not just once globally) since file-collection entries don't reliably
-# inherit a top-level default format in all Decap CMS versions.
+# Content pages use a .njk extension (Nunjucks templates). Decap needs
+# BOTH "format" and "extension" set explicitly on each file entry for
+# non-standard extensions like this — format alone isn't always enough
+# for Decap to correctly locate and parse the frontmatter block.
 backend:
   name: git-gateway
   branch: main
@@ -80,6 +79,7 @@ collections:
       - label: Linkedin Url
         name: linkedin_url
         widget: string
+    extension: json
   - name: '404'
     label: '404'
     file: content/404.njk
@@ -97,6 +97,7 @@ collections:
       name: text
       widget: text
     format: frontmatter
+    extension: njk
   - name: about
     label: About
     file: content/about.njk
@@ -263,25 +264,9 @@ collections:
     - label: Team Heading
       name: team_heading
       widget: string
-    - label: Team Intro
-      name: team_intro
-      widget: string
-    - label: Team
-      name: team
-      widget: list
-      fields:
-      - label: Image
-        name: image
-        widget: image
-      - label: Alt
-        name: alt
-        widget: string
-      - label: Name
-        name: name
-        widget: string
-      - label: Role
-        name: role
-        widget: string
+    - label: Team Text
+      name: team_text
+      widget: text
     - label: Why Eyebrow
       name: why_eyebrow
       widget: string
@@ -322,6 +307,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: badminton-courts
     label: Badminton Courts
     file: content/badminton-courts.njk
@@ -479,6 +465,7 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
   - name: basketball-courts
     label: Basketball Courts
     file: content/basketball-courts.njk
@@ -636,6 +623,7 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
   - name: blog-post
     label: Blog Post
     file: content/blog-post.njk
@@ -727,6 +715,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: blog
     label: Blog
     file: content/blog.njk
@@ -784,6 +773,7 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
   - name: contact
     label: Contact
     file: content/contact.njk
@@ -841,6 +831,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: faq
     label: Faq
     file: content/faq.njk
@@ -891,6 +882,7 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
   - name: football-turf
     label: Football Turf
     file: content/football-turf.njk
@@ -1048,6 +1040,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: index
     label: Index
     file: content/index.njk
@@ -1232,6 +1225,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: maintenance
     label: Maintenance
     file: content/maintenance.njk
@@ -1377,6 +1371,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: pickleball-courts
     label: Pickleball Courts
     file: content/pickleball-courts.njk
@@ -1534,6 +1529,7 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
   - name: projects
     label: Projects
     file: content/projects.njk
@@ -1637,6 +1633,7 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
   - name: services
     label: Services
     file: content/services.njk
@@ -1711,6 +1708,7 @@ collections:
       name: cta_text
       widget: text
     format: frontmatter
+    extension: njk
   - name: tennis-courts
     label: Tennis Courts
     file: content/tennis-courts.njk
@@ -1868,3 +1866,4 @@ collections:
       name: cta_text
       widget: string
     format: frontmatter
+    extension: njk
