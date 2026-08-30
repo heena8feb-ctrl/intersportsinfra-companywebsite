@@ -184,6 +184,9 @@ ul{margin:0;padding:0;list-style:none}
 }
 .badge b{font-family:var(--display);font-weight:700;font-size:22px;color:var(--white);letter-spacing:.02em}
 .badge span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#5d646b}
+.badge--logo{background:var(--chalk);box-shadow:none}
+.badge--logo span{color:#5a6459}
+.badge__logo{max-height:34px;max-width:130px;width:auto;height:auto;object-fit:contain;align-self:flex-start}
 
 /* ============================== STATEMENT ================== */
 .stmt{background:var(--chalk);position:relative;overflow:hidden}
