@@ -168,6 +168,7 @@
     var nextBtn = mform.querySelector('[data-next]');
     var prevBtn = mform.querySelector('[data-prev]');
     var submitBtn = mform.querySelector('button[type="submit"]');
+    var submitBtnOriginalHTML = submitBtn ? submitBtn.innerHTML : '';
     var at = 0;
     var submitted = false;
 
@@ -176,8 +177,10 @@
       Array.prototype.forEach.call(crumbs, function (li, i) {
         li.setAttribute('data-on', String(i === at));
       });
+      var onLastStep = at === sets.length - 1;
       if (prevBtn) prevBtn.disabled = at === 0;
-      if (nextBtn) nextBtn.disabled = at === sets.length - 1;
+      if (nextBtn) nextBtn.disabled = onLastStep;
+      if (submitBtn) submitBtn.disabled = !onLastStep;
     };
     paint();
 
@@ -213,7 +216,8 @@
         name: fd.get('name') || '',
         org: fd.get('org') || '',
         phone: fd.get('phone') || '',
-        email: fd.get('email') || ''
+        email: fd.get('email') || '',
+        consent: fd.get('consent') || ''
       };
       return payload;
     };
@@ -245,7 +249,12 @@
           submitted = true;
           Array.prototype.forEach.call(sets, function (fs) { fs.hidden = true; });
           var nav = mform.querySelector('.form__nav');
-          if (nav) nav.hidden = true;
+          if (nav) {
+            nav.hidden = true;
+            nav.style.display = 'none'; // .form__nav has its own display:flex rule, which
+                                         // overrides the [hidden] attribute's default styling —
+                                         // an explicit inline style is needed to actually hide it.
+          }
           Array.prototype.forEach.call(crumbs, function (li) { li.setAttribute('data-on', 'true'); });
           if (done) done.setAttribute('data-on', 'true');
         })
@@ -253,7 +262,10 @@
           setNavDisabled(false);
           if (nextBtn) nextBtn.disabled = at === sets.length - 1;
           if (prevBtn) prevBtn.disabled = at === 0;
-          if (submitBtn) submitBtn.textContent = 'Send Request';
+          if (submitBtn) {
+            submitBtn.disabled = at !== sets.length - 1;
+            submitBtn.innerHTML = submitBtnOriginalHTML;
+          }
           window.alert('Something went wrong sending your request. Please try again, or call/WhatsApp us directly.');
         });
     });
