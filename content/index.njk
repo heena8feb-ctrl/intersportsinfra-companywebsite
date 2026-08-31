@@ -1,593 +1,374 @@
-/* ============================================================
-   INTER SPORTS INFRA LLP — global stylesheet
-   Brand tokens are locked to the brand bible. Do not add colours.
-   ============================================================ */
+---
+layout: base.njk
+nav: home
+permalink: /index.html
+title: "Inter Sports Infra LLP — Sports Infrastructure Design & Build | Faridabad, India"
+description: "Inter Sports Infra LLP designs and builds football turf, pickleball, badminton, basketball and tennis courts, running tracks and sports flooring across India. Certified surfaces, engineered to standard."
+schema:
+  "@context": "https://schema.org"
+  "@type": "GeneralContractor"
+  name: "Inter Sports Infra LLP"
+  url: "https://www.intersportsinfra.com/"
+  telephone: "+91-92179-81815"
+  email: "intersportsinfra@gmail.com"
+  address:
+    "@type": "PostalAddress"
+    streetAddress: "272, First Floor, Sector 8"
+    addressLocality: "Faridabad, Ballabhgarh"
+    addressRegion: "Haryana"
+    postalCode: "121004"
+    addressCountry: "IN"
+  areaServed: ["New Delhi", "Mumbai", "Bangalore", "Guwahati"]
+  slogan: "Sports surfaces, engineered."
 
-:root{
-  --black:#0B0F0D;
-  --blue:#4D8CD4;
-  --deep:#1E5B96;
-  --chalk:#F1F4EE;
-  --grey:#5A6459;
-  --line:#e2e7dd;
-  --white:#fff;
+hero_eyebrow: "Sports surfaces, engineered."
+hero_heading: "Engineering the<br>Future of <em>Sports</em><br>Infrastructure"
+hero_sub: "From ground preparation to the final line marking, we design and build playing surfaces that meet federation standard and survive Indian weather — football turf, pickleball, badminton, basketball, tennis, running tracks and the civil works beneath them."
+hero_meta_tags: ["Turf", "Courts", "Tracks", "Design", "Build"]
 
-  --display:'Oswald','Arial Narrow',Arial,sans-serif;
-  --body:'Archivo',Calibri,'Helvetica Neue',Arial,sans-serif;
-  --mono:'IBM Plex Mono',Consolas,'Courier New',monospace;
+trust_stats:
+  - value: 12
+    suffix: "+"
+    label: "Years in business"
+  - value: 180
+    suffix: "+"
+    label: "Projects completed"
+  - value: 1400000
+    suffix: ""
+    label: "Sq. ft. delivered"
+  - value: 24
+    suffix: ""
+    label: "Cities served"
 
-  --pad:clamp(20px,5vw,88px);
-  --maxw:1360px;
-  --hdr:76px;
-}
+services_eyebrow: "What we build"
+services_heading: "Excellence in Every Square Meter"
+services_intro: "Four capabilities, one contract. We hold the whole scope — so nobody points at another vendor when a line is 8 mm out."
+services:
+  - number: "01"
+    icon_path: "M10 88h80M18 88V40l32-22 32 22v48M38 88V62h24v26"
+    title: "Sports Civil Construction"
+    description: "Excavation, sub-base, drainage, kerbs, retaining structures and foundations. The half of the job nobody photographs and every failure traces back to."
+  - number: "02"
+    icon_path: "M12 20h76v60H12zM12 50h76M50 20v60"
+    title: "Certified Sports Flooring"
+    description: "Acrylic hard courts, artificial turf, synthetic athletics tracks, wooden and vinyl indoor floors, EPDM and PU. Laid to the surface's own published tolerance."
+  - number: "03"
+    icon_path: "M14 86V14h48l24 24v48zM62 14v24h24M28 56h44M28 70h30"
+    title: "Design and Build"
+    description: "Site survey, orientation study, drainage strategy, layout drawings and a fixed-scope quote. One drawing set, one accountable contractor."
+  - number: "04"
+    icon_path: "M20 88V30M80 88V30M20 30h60M32 30V12h36v18M50 30v58"
+    title: "Equipment & Accessories"
+    description: "Goalposts, nets, poles, seating, fencing, floodlighting and scoreboards — specified with the surface, not bolted on after handover."
 
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--white);color:#3d443c;
-  font-family:var(--body);font-size:17px;line-height:1.65;
-  text-wrap:pretty;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:var(--deep);text-decoration:none}
-a:hover{color:var(--black)}
-button{font:inherit;cursor:pointer}
-h1,h2,h3,h4{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.98;letter-spacing:-.01em;margin:0;color:var(--black)}
-p{margin:0}
-ul{margin:0;padding:0;list-style:none}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+standards_lead: "Built to<br>federation<br>standard"
+standards_badges:
+  - code: "FIFA"
+    label: "Quality turf systems"
+    logo: "/images/standards-fifa.png"
+  - code: "ITF"
+    label: "Tennis court pace"
+    logo: "/images/standards-itf.png"
+  - code: "BWF"
+    label: "Badminton flooring"
+    logo: "/images/standards-bwf.png"
+  - code: "FIBA"
+    label: "Basketball surfaces"
+    logo: "/images/standards-fiba.png"
+  - code: "World Athletics"
+    label: "Athletics tracks"
+    logo: "/images/standards-world-athletics.png"
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);width:100%}
-.eyebrow{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--deep)}
-.eyebrow--on-dark{color:var(--blue)}
-.mono{font-family:var(--mono)}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:12px;top:12px;z-index:200;background:var(--blue);color:var(--black);padding:10px 16px;font-weight:700}
+statement_eyebrow: "Why we exist"
+statement_quote: "We don't just build courts. We build <em>the place you play.</em>"
+statement_paragraphs:
+  - "Everyone deserves the right place, the right track and the right feel to play their favourite sport. That belief decides every specification we write — the sub-base depth nobody sees, the 5 mm line tolerance nobody measures, the drainage fall that decides whether a monsoon costs you a season."
+  - "We work in millimetres because a court that plays wrong is a court nobody returns to. Whether it is a school in Ballabhgarh or an academy in Guwahati, the standard is the same one."
 
-/* --- lane bar: the brand's repeating rule ------------------- */
-.lanes{display:flex;gap:5px;height:6px}
-.lanes span:first-child{width:88px;background:var(--blue);flex:none}
-.lanes span:last-child{flex:1;background:var(--line)}
-.lanes--dark span:last-child{background:#2a2e33}
+projects_eyebrow: "Featured work"
+projects_heading: "Surfaces We've Delivered"
+projects_intro: "Filter by sport. Every project below is built, marked and handed over."
+featured_projects:
+  - sport: "football"
+    title: "Full-size Football Turf"
+    meta: "Monofilament turf · shock pad base"
+    image: "/images/index-1-photo-wide-shot-of-finished-turf.jpg"
+    alt: "Photo — wide shot of finished turf"
+  - sport: "pickleball"
+    title: "Pickleball Courts"
+    meta: "8-coat acrylic · twin courts · kitchen line marking"
+    image: "/images/pickleball-courts-3-photo-colour-coat-application.jpg"
+    alt: "Photo — two courts, line detail"
+  - sport: "badminton"
+    title: "Indoor Badminton Hall"
+    meta: "BWF-approved vinyl flooring"
+    image: "/images/index-3-photo-indoor-hall-players.jpg"
+    alt: "Photo — indoor hall, players"
+  - sport: "basketball"
+    title: "Basketball Court"
+    meta: "Acrylic on concrete · FIBA dimensions"
+    image: "/images/basketball-courts-2-photo-key-and-free-throw-circle.jpg"
+    alt: "Photo — key and free-throw circle"
+  - sport: "tennis"
+    title: "Tennis Court Resurfacing"
+    meta: "Crack repair · recoat · ITF medium pace"
+    image: "/images/index-5-photo-court-from-the-baseline.jpg"
+    alt: "Photo — court from the baseline"
+  - sport: "track"
+    title: "Athletics Track"
+    meta: "EPDM surface · IAAF line markings"
+    image: "/images/index-6-photo-track-curve-lane-markings.jpg"
+    alt: "Photo — track curve, lane markings"
 
-/* ============================== HEADER ===================== */
-.hdr{
-  position:sticky;top:0;z-index:100;background:var(--white);
-  border-bottom:1px solid var(--line);transition:box-shadow .25s,transform .3s;
-}
-.hdr.is-stuck{box-shadow:0 6px 28px rgba(11,15,13,.09)}
-.hdr__bar{display:flex;align-items:center;gap:28px;height:var(--hdr)}
-.brand{display:flex;align-items:center;gap:14px;flex:none}
-.brand svg{width:40px;height:40px;flex:none}
-.brand__wm{display:flex;flex-direction:column;gap:4px}
-.brand__name{font-family:var(--display);font-weight:700;font-size:25px;line-height:.9;color:var(--black);white-space:nowrap}
-.brand__sub{display:flex;align-items:center;gap:7px}
-.brand__sub i{width:18px;height:4px;background:var(--blue);flex:none}
-.brand__sub span{font-weight:700;font-size:10.1px;letter-spacing:.34em;color:var(--black);white-space:nowrap}
+clients_eyebrow: "Trusted by"
+clients_heading: "Schools, Academies, Builders"
+clients_trust_text: "We work with schools, academies, residential societies, clubs and national partners across India — each project scoped, specified and signed off before ground is broken."
 
-.nav{margin-left:auto;display:flex;align-items:center;gap:4px}
-.nav a{
-  font-weight:600;font-size:14.5px;letter-spacing:.02em;color:var(--black);
-  padding:9px 13px;position:relative;white-space:nowrap;
-}
-.nav a::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .22s}
-.nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+reviews_eyebrow: "Google reviews"
+reviews_heading: "What Clients Say"
+reviews_note: "Replace these with real reviews pulled from your Google Business Profile."
+reviews:
+  - text: "[ Placeholder review — paste the client's own words here. Two or three sentences is plenty. ]"
+    name: "Client Name"
+    role: "Role · Organisation"
+  - text: "[ Placeholder review — the most useful ones name the sport and the timeline. ]"
+    name: "Client Name"
+    role: "Role · Organisation"
+  - text: "[ Placeholder review — keep the reviewer's name and organisation for credibility. ]"
+    name: "Client Name"
+    role: "Role · Organisation"
 
-.hdr__contact{display:flex;align-items:center;gap:18px;flex:none;padding-left:14px;border-left:1px solid var(--line)}
-.hdr__contact a{font-family:var(--mono);font-size:14px;color:var(--black);white-space:nowrap}
-.wa{
-  display:grid;place-items:center;width:40px;height:40px;flex:none;
-  background:var(--black);transition:background .2s;
-}
-.wa svg{width:21px;height:21px;fill:var(--white)}
-.wa:hover{background:var(--deep)}
+process_eyebrow: "How it works"
+process_heading: "Six Steps, No Surprises"
+process_intro: "You always know which stage you are in and what happens next."
+process_steps:
+  - number: "01"
+    title: "Site Visit"
+    description: "We measure the ground, check levels, orientation and drainage. Free, and no obligation."
+  - number: "02"
+    title: "Design"
+    description: "Layout drawings, surface build-up and a written specification you can take to any contractor."
+  - number: "03"
+    title: "Quote"
+    description: "Fixed scope, itemised. What is excluded is printed in the same size as what is included."
+  - number: "04"
+    title: "Construction"
+    description: "Civil works, base, surface and line marking — one crew, one site supervisor, weekly photos."
+  - number: "05"
+    title: "Handover"
+    description: "Joint measurement against the spec, warranty documents, and the first game played on it."
+  - number: "06"
+    title: "Maintenance"
+    description: "An annual care plan so the surface still plays to standard in year five."
 
-.burger{display:none;margin-left:auto;width:44px;height:44px;background:none;border:0;padding:0}
-.burger i{display:block;height:3px;background:var(--black);margin:5px 8px;transition:transform .25s,opacity .2s}
-.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
-.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+cta_heading: "Tell Us About Your Ground"
+cta_text: "Send us the site dimensions and the sport. You'll have a layout and an indicative cost within three working days."
+---
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <svg class="hero__court" data-draw viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+    <path d="M60 -40V760" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M-40 660H1480" stroke="#2a2e33" stroke-width="3"/>
+    <path d="M60 300A360 360 0 0 1 420 660" stroke="#4D8CD4" stroke-width="3"/>
+    <path d="M60 160A500 500 0 0 1 560 660" stroke="#1E5B96" stroke-width="2.5"/>
+    <path d="M60 20A640 640 0 0 1 700 660" stroke="#1c2023" stroke-width="2.5"/>
+    <path d="M1000 -40V760" stroke="#1c2023" stroke-width="2.5"/>
+    <path d="M1180 -40V760" stroke="#1c2023" stroke-width="2.5"/>
+    <circle cx="1000" cy="310" r="120" stroke="#1c2023" stroke-width="2.5"/>
+  </svg>
 
-.drawer{
-  position:fixed;inset:var(--hdr) 0 0;background:var(--black);z-index:99;
-  padding:32px var(--pad);display:flex;flex-direction:column;gap:2px;
-  transform:translateY(-102%);transition:transform .32s cubic-bezier(.4,0,.2,1);
-  overflow-y:auto;
-}
-.drawer[data-open="true"]{transform:translateY(0)}
-.drawer a{
-  font-family:var(--display);font-weight:700;font-size:34px;text-transform:uppercase;
-  color:var(--white);padding:11px 0;border-bottom:1px solid #2a2e33;
-}
-.drawer a:hover{color:var(--blue)}
-.drawer__foot{margin-top:26px;display:flex;flex-direction:column;gap:8px}
-.drawer__foot a{font-family:var(--mono);font-size:16px;border:0;padding:0;color:var(--blue);text-transform:none}
+  <div class="wrap hero__inner">
+    <p class="eyebrow eyebrow--on-dark rv">{{ hero_eyebrow }}</p>
+    <h1 class="rv rv-d1">{{ hero_heading | safe }}</h1>
+    <p class="hero__sub rv rv-d2">{{ hero_sub }}</p>
+    <div class="hero__cta rv rv-d3">
+      <a class="btn btn--primary" href="/contact/">
+        Get a Free Consultation
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="/projects/">See Our Work</a>
+    </div>
+    <p class="hero__meta rv rv-d3">
+      {% for tag in hero_meta_tags %}<span>{{ tag }}</span>{% endfor %}
+    </p>
+  </div>
+</section>
 
-/* ============================== HERO ======================= */
-.hero{position:relative;background:var(--black);color:var(--white);overflow:hidden;isolation:isolate}
-.hero__court{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.5}
-.hero__court path,.hero__court circle{
-  stroke-dasharray:var(--len,1200);stroke-dashoffset:var(--len,1200);
-  animation:draw 1.9s cubic-bezier(.33,.9,.26,1) forwards;
-}
-@keyframes draw{to{stroke-dashoffset:0}}
-.hero__inner{position:relative;z-index:1;padding-top:clamp(64px,11vw,132px);padding-bottom:clamp(56px,8vw,104px);max-width:1000px}
-.hero h1{
-  font-size:clamp(46px,8.6vw,110px);color:var(--white);letter-spacing:-.015em;
-}
-.hero h1 em{font-style:normal;color:var(--blue)}
-.hero__sub{margin-top:26px;max-width:660px;font-size:clamp(17px,1.7vw,20px);line-height:1.7;color:#a9b1b8}
-.hero__cta{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px}
-.hero__meta{margin-top:52px;display:flex;flex-wrap:wrap;gap:10px 30px;font-family:var(--mono);font-size:13.5px;letter-spacing:.06em;color:#5d646b;text-transform:uppercase}
+<!-- ======================= TRUST BAR ======================= -->
+<section class="trust" aria-label="Company at a glance">
+  <div class="wrap">
+    <ul>
+      {% for s in trust_stats %}
+      <li {% set _d = loop.index0 % 3 %}class="rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}"><b><span data-count="{{ s.value }}">0</span><i>{{ s.suffix }}</i></b><span>{{ s.label }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
 
-.btn{
-  display:inline-flex;align-items:center;gap:12px;padding:17px 30px;
-  font-family:var(--body);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;
-  border:0;transition:background .2s,color .2s,transform .2s;
-}
-.btn svg{width:15px;height:15px;flex:none;transition:transform .2s}
-.btn:hover svg{transform:translateX(4px)}
-.btn--primary{background:var(--blue);color:var(--black)}
-.btn--primary:hover{background:var(--white);color:var(--black)}
-.btn--ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 2px #3a4046}
-.btn--ghost:hover{background:var(--white);color:var(--black);box-shadow:none}
-.btn--dark{background:var(--black);color:var(--white)}
-.btn--dark:hover{background:var(--deep);color:var(--white)}
+<!-- ======================= SERVICES ======================= -->
+<section class="sec" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label">
+        <p class="eyebrow">{{ services_eyebrow }}</p>
+        <h2 id="svc-h" class="rv">{{ services_heading }}</h2>
+      </div>
+      <p class="rv rv-d1">{{ services_intro }}</p>
+    </div>
 
-/* ============================== TRUST BAR ================== */
-.trust{background:var(--chalk);border-bottom:1px solid var(--line)}
-.trust ul{display:grid;grid-template-columns:repeat(4,1fr)}
-.trust li{padding:34px 30px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
-.trust li:first-child{border-left:0;padding-left:0}
-.trust b{font-family:var(--display);font-weight:700;font-size:clamp(38px,4.6vw,60px);line-height:.9;color:var(--black);font-variant-numeric:tabular-nums}
-.trust b i{font-style:normal;color:var(--blue)}
-.trust span{font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+    <div class="cards">
+      {% for svc in services %}
+      <a {% set _d = loop.index0 % 3 %}class="card rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="/services/">
+        <span class="card__n">{{ svc.number }}</span>
+        <svg class="card__ico" viewBox="0 0 100 100" aria-hidden="true"><path d="{{ svc.icon_path }}"/></svg>
+        <h3>{{ svc.title }}</h3>
+        <p>{{ svc.description }}</p>
+        <span class="card__more">Explore <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-/* ============================== SECTIONS =================== */
-.sec{padding:clamp(64px,9vw,124px) 0}
-.sec--chalk{background:var(--chalk)}
-.sec--dark{background:var(--black);color:#a9b1b8}
-.sec--dark h2,.sec--dark h3{color:var(--white)}
-.sec__head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:44px}
-.sec__head h2{font-size:clamp(34px,4.6vw,64px);max-width:15ch}
-.sec__head p{max-width:44ch;color:var(--grey)}
-.sec--dark .sec__head p{color:#8b939b}
-.sec__label{display:flex;flex-direction:column;gap:12px}
+<!-- ======================= STANDARDS ======================= -->
+<section class="std angle-top angle-btm" aria-label="Standards we build to">
+  <div class="wrap std__row">
+    <p class="std__lead">{{ standards_lead | safe }}</p>
+    <div class="std__badges">
+      {% for b in standards_badges %}
+      <div {% set _d = loop.index0 % 3 %}class="badge{% if b.logo %} badge--logo{% endif %} rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}">
+        {% if b.logo %}<img class="badge__logo" src="{{ b.logo }}" alt="{{ b.code }} logo" loading="lazy">{% else %}<b>{{ b.code }}</b>{% endif %}
+        <span>{{ b.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-/* angled divider via clip-path */
-.angle-top{clip-path:polygon(0 3.2vw,100% 0,100% 100%,0 100%)}
-.angle-btm{clip-path:polygon(0 0,100% 0,100% calc(100% - 3.2vw),0 100%)}
+<!-- ======================= STATEMENT ======================= -->
+<section class="sec stmt" aria-labelledby="stmt-h">
+  <svg class="stmt__wm" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+    <path d="M13 4V93.5" stroke="#0B0F0D" stroke-width="13"/>
+    <path d="M6.5 87H97" stroke="#0B0F0D" stroke-width="13"/>
+    <path d="M13 51A36 36 0 0 1 49 87" stroke="#0B0F0D" stroke-width="13"/>
+    <circle cx="74" cy="47" r="8" fill="#0B0F0D"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow rv">{{ statement_eyebrow }}</p>
+    <blockquote class="rv rv-d1">
+      <p id="stmt-h">{{ statement_quote | safe }}</p>
+    </blockquote>
+    <div class="stmt__body rv rv-d2">
+      {% for para in statement_paragraphs %}<p>{{ para }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
 
-/* ============================== SERVICES =================== */
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
-.card{
-  background:var(--white);padding:38px 32px 34px;display:flex;flex-direction:column;gap:16px;
-  position:relative;transition:background .25s;min-height:330px;
-}
-.card:hover{background:var(--chalk)}
-.card__ico{width:46px;height:46px;stroke:var(--black);stroke-width:6;fill:none}
-.card:hover .card__ico{stroke:var(--deep)}
-.card h3{font-size:26px;letter-spacing:0}
-.card p{font-size:15.5px;line-height:1.6;color:var(--grey)}
-.card__n{position:absolute;top:22px;right:26px;font-family:var(--mono);font-size:12.5px;color:#b8c0b5}
-.card__more{margin-top:auto;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);display:flex;align-items:center;gap:9px}
-.card__more svg{width:13px;height:13px}
+<!-- ======================= PROJECTS ======================= -->
+<section class="sec" id="projects" aria-labelledby="proj-h">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label">
+        <p class="eyebrow">{{ projects_eyebrow }}</p>
+        <h2 id="proj-h" class="rv">{{ projects_heading }}</h2>
+      </div>
+      <p class="rv rv-d1">{{ projects_intro }}</p>
+    </div>
 
-/* ============================== STANDARDS ================== */
-.std{background:var(--black);padding:52px 0}
-.std__row{display:flex;flex-wrap:wrap;align-items:center;gap:34px 48px}
-.std__lead{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);max-width:190px;line-height:1.6}
-.std__badges{display:flex;flex-wrap:wrap;gap:12px;flex:1}
-.badge{
-  display:flex;flex-direction:column;gap:3px;padding:15px 22px;
-  box-shadow:inset 0 0 0 1px #2a2e33;min-width:150px;
-}
-.badge b{font-family:var(--display);font-weight:700;font-size:22px;color:var(--white);letter-spacing:.02em}
-.badge span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#5d646b}
-.badge--logo{background:var(--chalk);box-shadow:none}
-.badge--logo span{color:#5a6459}
-.badge__logo{max-height:34px;max-width:130px;width:auto;height:auto;object-fit:contain;align-self:flex-start}
+    <div class="filters" data-filters role="group" aria-label="Filter projects by sport">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="football" aria-pressed="false">Football</button>
+      <button type="button" data-filter="pickleball" aria-pressed="false">Pickleball</button>
+      <button type="button" data-filter="badminton" aria-pressed="false">Badminton</button>
+      <button type="button" data-filter="basketball" aria-pressed="false">Basketball</button>
+      <button type="button" data-filter="tennis" aria-pressed="false">Tennis</button>
+      <button type="button" data-filter="track" aria-pressed="false">Track</button>
+    </div>
 
-/* ============================== STATEMENT ================== */
-.stmt{background:var(--chalk);position:relative;overflow:hidden}
-.stmt__wm{position:absolute;right:-140px;bottom:-170px;width:620px;height:620px;opacity:.055;pointer-events:none}
-.stmt blockquote{margin:0;position:relative;max-width:none}
-.stmt blockquote p{
-  font-family:var(--display);font-weight:700;font-size:clamp(34px,5.9vw,82px);line-height:1.02;
-  text-transform:uppercase;color:var(--black);max-width:min(100%,21ch);
-}
-.stmt blockquote p em{font-style:normal;color:var(--deep)}
-.stmt__body{margin-top:34px;max-width:56ch;display:flex;flex-direction:column;gap:18px;color:var(--grey);position:relative}
+    <div class="grid-proj">
+      {% for p in featured_projects %}
+      <a {% set _d = loop.index0 % 3 %}class="proj rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="/projects/" data-sport="{{ p.sport }}">
+        <div class="proj__img"><img class="proj__ph" src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></div>
+        <div class="proj__body"><h3>{{ p.title }}</h3><p class="mono">{{ p.meta }}</p></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-/* ============================== PROJECTS =================== */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.filters button{
-  padding:11px 20px;background:transparent;box-shadow:inset 0 0 0 1px var(--line);
-  font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);
-  transition:background .2s,color .2s,box-shadow .2s;
-}
-.filters button:hover{color:var(--black);box-shadow:inset 0 0 0 1px var(--black)}
-.filters button[aria-pressed="true"]{background:var(--black);color:var(--white);box-shadow:none}
-.grid-proj{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.proj{position:relative;display:flex;flex-direction:column;background:var(--chalk);overflow:hidden}
-.proj[hidden]{display:none}
-.proj__img{aspect-ratio:4/3;position:relative;background:#dfe4da;overflow:hidden}
-.proj__img img{width:100%;height:100%;object-fit:cover}
-.proj__ph{position:absolute;inset:0;display:grid;place-items:center;gap:8px;background:repeating-linear-gradient(135deg,#dfe4da 0 14px,#d7ddd2 14px 28px)}
-.proj__ph span{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f998e;text-align:center;padding:0 20px}
-.proj__body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:7px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);flex:1}
-.proj__body h3{font-size:23px}
-.proj__body .mono{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
-.proj::after{content:"";position:absolute;left:0;top:0;width:5px;height:0;background:var(--blue);transition:height .3s}
-.proj:hover::after{height:100%}
+<!-- ======================= CLIENTS ======================= -->
+<section class="sec sec--chalk" aria-labelledby="cl-h">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label">
+        <p class="eyebrow">{{ clients_eyebrow }}</p>
+        <h2 id="cl-h" class="rv">{{ clients_heading }}</h2>
+      </div>
+      <p class="rv rv-d1">{{ clients_trust_text }}</p>
+    </div>
+  </div>
+</section>
 
-/* ============================== CLIENTS ==================== */
-.clients{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--line)}
-.clients li{
-  background:var(--white);aspect-ratio:2.4/1;display:grid;place-items:center;
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#9aa398;
-  text-align:center;padding:14px;
-}
+{#
+<!-- ======================= REVIEWS =======================
+     Disabled until we have real client testimonials.
+     Delete the two comment-marker lines above and below this
+     block to bring the section back. -->
+<section class="sec" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label">
+        <p class="eyebrow">{{ reviews_eyebrow }}</p>
+        <h2 id="rev-h" class="rv">{{ reviews_heading }}</h2>
+      </div>
+      <p class="rv rv-d1">{{ reviews_note }}</p>
+    </div>
+    <div class="reviews">
+      {% for r in reviews %}
+      <blockquote {% set _d = loop.index0 % 3 %}class="review rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}">
+        <div class="review__stars" aria-label="5 out of 5">
+          {% for i in range(5) %}<svg viewBox="0 0 16 16"><path d="M8 1l2.1 4.6 5 .5-3.7 3.4 1 4.9L8 11.9 3.6 14.4l1-4.9L.9 6.1l5-.5z"/></svg>{% endfor %}
+        </div>
+        <p>{{ r.text }}</p>
+        <footer><b>{{ r.name }}</b><span>{{ r.role }}</span></footer>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+#}
 
-/* ============================== REVIEWS ==================== */
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.review{background:var(--white);padding:32px 30px 28px;display:flex;flex-direction:column;gap:16px;box-shadow:inset 0 0 0 1px var(--line)}
-.review__stars{display:flex;gap:3px}
-.review__stars svg{width:16px;height:16px;fill:var(--blue)}
-.review p{font-size:16.5px;line-height:1.68;color:#3d443c}
-.review footer{margin-top:auto;display:flex;flex-direction:column;gap:2px}
-.review b{font-family:var(--display);font-weight:700;font-size:20px;color:var(--black);letter-spacing:.01em}
-.review span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+<!-- ======================= PROCESS ======================= -->
+<section class="sec sec--dark angle-top" aria-labelledby="pr-h">
+  <div class="wrap">
+    <div class="sec__head">
+      <div class="sec__label">
+        <p class="eyebrow eyebrow--on-dark">{{ process_eyebrow }}</p>
+        <h2 id="pr-h" class="rv">{{ process_heading }}</h2>
+      </div>
+      <p class="rv rv-d1">{{ process_intro }}</p>
+    </div>
+    <div class="steps">
+      {% for step in process_steps %}
+      <div class="step"><span class="step__n">{{ step.number }}</span><h3>{{ step.title }}</h3><p>{{ step.description }}</p><span class="step__bar"><i></i></span></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-/* ============================== PROCESS ==================== */
-.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:#2a2e33;position:relative}
-.step{background:var(--black);padding:32px 22px 30px;display:flex;flex-direction:column;gap:12px;min-height:230px}
-.step__n{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:var(--blue)}
-.step h3{font-size:22px;color:var(--white)}
-.step p{font-size:14.5px;line-height:1.55;color:#8b939b}
-.step__bar{margin-top:auto;height:4px;background:#2a2e33;position:relative;overflow:hidden}
-.step__bar i{position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.4,0,.2,1)}
-.is-in .step__bar i{transform:scaleX(1)}
-
-/* ============================== CTA ======================== */
-.cta{background:var(--blue);color:var(--black);padding:clamp(56px,7.5vw,96px) 0}
-.cta__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:34px}
-.cta h2{font-size:clamp(34px,5vw,66px);max-width:18ch}
-.cta p{margin-top:14px;max-width:46ch;color:#0f2338;font-weight:500}
-.cta__btns{display:flex;flex-wrap:wrap;gap:12px}
-.cta .btn--dark:hover{background:var(--white);color:var(--black)}
-
-/* ============================== FOOTER ===================== */
-.ftr{background:var(--black);color:#8b939b;padding:clamp(56px,7vw,88px) 0 0}
-.ftr__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:44px}
-.ftr h4{font-size:14px;font-family:var(--body);font-weight:700;letter-spacing:.18em;color:var(--blue);margin-bottom:18px;text-transform:uppercase}
-.ftr__brand .brand__name{color:var(--white);font-size:32px}
-.ftr__brand .brand__sub span{color:var(--white)}
-.ftr__brand svg{width:52px;height:52px}
-.ftr__tag{margin-top:20px;font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
-.ftr__addr{margin-top:16px;font-size:15px;line-height:1.6;color:#8b939b;max-width:34ch}
-.ftr ul li{margin-bottom:9px;font-size:15px}
-.ftr ul a{color:#a9b1b8}
-.ftr ul a:hover{color:var(--blue)}
-.ftr__contact li{font-family:var(--mono);font-size:14.5px;color:#a9b1b8}
-.ftr__certs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.ftr__certs span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;padding:7px 11px;box-shadow:inset 0 0 0 1px #2a2e33;color:#8b939b;text-transform:uppercase}
-.ftr__social{display:flex;gap:8px;margin-top:20px}
-.ftr__social a{width:38px;height:38px;display:grid;place-items:center;box-shadow:inset 0 0 0 1px #2a2e33;transition:background .2s}
-.ftr__social svg{width:17px;height:17px;fill:#a9b1b8}
-.ftr__social a:hover{background:var(--blue)}
-.ftr__social a:hover svg{fill:var(--black)}
-.ftr__base{margin-top:52px;padding:22px 0 26px;border-top:1px solid #1c2023;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
-.ftr__base p,.ftr__base a{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:#5d646b;text-transform:uppercase}
-.ftr__cities{font-family:var(--mono);font-size:12px;letter-spacing:.4em;color:#5d646b;text-transform:uppercase}
-
-/* ============================== MOBILE BAR ================= */
-.mbar{
-  position:fixed;left:0;right:0;bottom:0;z-index:98;display:none;
-  grid-template-columns:1fr 1fr;background:var(--black);border-top:1px solid #2a2e33;
-}
-.mbar a{
-  display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 8px;
-  font-weight:700;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);
-}
-.mbar a+a{background:var(--blue);color:var(--black)}
-.mbar svg{width:17px;height:17px;fill:currentColor}
-
-/* ============================== 404 ======================== */
-.nf{min-height:calc(100vh - var(--hdr));background:var(--black);color:#a9b1b8;display:grid;place-items:center;padding:80px var(--pad);position:relative;overflow:hidden}
-.nf__inner{position:relative;z-index:1;max-width:640px}
-.nf b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(110px,22vw,240px);line-height:.82;color:var(--white)}
-.nf b i{font-style:normal;color:var(--blue)}
-.nf h1{margin-top:18px;font-size:clamp(28px,4vw,46px);color:var(--white)}
-.nf p{margin-top:18px;font-size:17px;line-height:1.7}
-.nf__cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
-.nf__court{position:absolute;right:-8%;bottom:-14%;width:min(780px,90vw);opacity:.12}
-
-/* ============================== REVEAL ===================== */
-.js-reveal .rv{opacity:0;transform:translateY(26px);transition:opacity .62s cubic-bezier(.3,.8,.3,1),transform .62s cubic-bezier(.3,.8,.3,1)}
-.js-reveal .rv.is-in{opacity:1;transform:none}
-.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){
-  .js-reveal .rv{opacity:1;transform:none;transition:none}
-  .hero__court path,.hero__court circle{animation:none;stroke-dashoffset:0}
-  html{scroll-behavior:auto}
-  .step__bar i{transform:scaleX(1)}
-}
-
-/* ============================== RESPONSIVE ================= */
-@media(max-width:1180px){
-  .hdr__contact a{display:none}
-  .nav a{padding:9px 10px;font-size:13.5px}
-  .steps{grid-template-columns:repeat(3,1fr)}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .clients{grid-template-columns:repeat(4,1fr)}
-  .ftr__grid{grid-template-columns:1fr 1fr;gap:40px}
-}
-@media(max-width:900px){
-  .nav,.hdr__contact{display:none}
-  .burger{display:block}
-  .grid-proj,.reviews{grid-template-columns:repeat(2,1fr)}
-  .trust ul{grid-template-columns:repeat(2,1fr)}
-  .trust li{border-left:0;box-shadow:inset 0 1px 0 var(--line);padding:26px 0}
-  .trust li:nth-child(-n+2){box-shadow:none}
-  .mbar{display:grid}
-  body{padding-bottom:54px}
-  .drawer{padding-bottom:100px}
-}
-@media(max-width:640px){
-  .cards,.grid-proj,.reviews,.steps{grid-template-columns:1fr}
-  .clients{grid-template-columns:repeat(2,1fr)}
-  .ftr__grid{grid-template-columns:1fr}
-  .card{min-height:0}
-  .std__row{gap:22px}
-  .angle-top,.angle-btm{clip-path:none}
-  .drawer a{font-size:26px}
-}
-@media print{
-  .hdr,.mbar,.drawer,.cta,.filters{display:none!important}
-  body{color:#000}
-}
-
-/* ============================================================
-   COMPONENTS ADDED FOR INNER PAGES
-   No new brand tokens — everything below reuses the variables.
-   ============================================================ */
-
-/* --- page hero (smaller than the home hero) ---------------- */
-.phero{position:relative;background:var(--black);color:#a9b1b8;overflow:hidden;isolation:isolate}
-.phero__court{position:absolute;inset:0;width:100%;height:100%;opacity:.45;z-index:0}
-.phero__in{position:relative;z-index:1;padding-top:clamp(52px,8vw,104px);padding-bottom:clamp(44px,6vw,80px);max-width:900px}
-.phero h1{font-size:clamp(38px,6.6vw,84px);color:var(--white)}
-.phero h1 em{font-style:normal;color:var(--blue)}
-.phero p{margin-top:20px;max-width:62ch;font-size:clamp(16.5px,1.6vw,19px);line-height:1.7;color:#a9b1b8}
-.phero__cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
-.crumb{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#5d646b;margin-bottom:22px}
-.crumb a{color:#8b939b}
-.crumb a:hover{color:var(--blue)}
-
-/* --- generic two-column prose ------------------------------ */
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:start}
-.prose{display:flex;flex-direction:column;gap:18px;max-width:62ch}
-.prose h3{font-size:26px;margin-top:12px}
-.prose p{color:var(--grey);font-size:16.5px;line-height:1.72}
-.sec--dark .prose p{color:#8b939b}
-
-/* --- spec table -------------------------------------------- */
-.spec{width:100%;border-collapse:collapse}
-.spec caption{text-align:left;font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--deep);padding-bottom:14px}
-.spec th,.spec td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:15.5px;vertical-align:top}
-.spec thead th{background:var(--chalk);font-family:var(--body);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);border-bottom:1px solid var(--line)}
-.spec td:first-child{color:#3d443c}
-.spec td.num,.spec td:last-child{font-family:var(--mono);font-size:14.5px;color:var(--black)}
-.sec--dark .spec th,.sec--dark .spec td{border-color:#2a2e33}
-.sec--dark .spec thead th{background:#14181a;color:#8b939b}
-.sec--dark .spec td:first-child{color:#a9b1b8}
-.sec--dark .spec td:last-child{color:var(--white)}
-
-/* --- key/value tiles --------------------------------------- */
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
-.tile{background:var(--white);padding:26px 24px;display:flex;flex-direction:column;gap:6px}
-.tile b{font-family:var(--display);font-weight:700;font-size:34px;line-height:.95;color:var(--black)}
-.tile span{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
-.sec--dark .tiles{background:#2a2e33}
-.sec--dark .tile{background:var(--black)}
-.sec--dark .tile b{color:var(--white)}
-
-/* --- gallery ----------------------------------------------- */
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gal figure{margin:0;position:relative}
-.gal .ph{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#dfe4da 0 14px,#d7ddd2 14px 28px);display:grid;place-items:center;padding:18px}
-.gal .ph span{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f998e;text-align:center}
-.gal figcaption{margin-top:9px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
-.gal--wide{grid-template-columns:repeat(2,1fr)}
-
-/* --- accordion --------------------------------------------- */
-.acc{border-top:1px solid var(--line)}
-.acc__item{border-bottom:1px solid var(--line)}
-.acc__btn{
-  width:100%;background:none;border:0;padding:24px 44px 24px 0;text-align:left;position:relative;
-  font-family:var(--display);font-weight:700;font-size:clamp(19px,2vw,25px);text-transform:uppercase;
-  color:var(--black);line-height:1.15;letter-spacing:.005em;
-}
-.acc__btn:hover{color:var(--deep)}
-.acc__btn::after,.acc__btn::before{content:"";position:absolute;right:6px;top:50%;background:var(--blue);transition:transform .25s,opacity .25s}
-.acc__btn::before{width:18px;height:3px;margin-top:-1.5px}
-.acc__btn::after{width:3px;height:18px;margin-top:-9px;right:13.5px}
-.acc__btn[aria-expanded="true"]::after{transform:scaleY(0)}
-.acc__panel{overflow:hidden;max-height:0;transition:max-height .32s cubic-bezier(.4,0,.2,1)}
-.acc__panel > div{padding:0 clamp(0px,4vw,60px) 26px 0;display:flex;flex-direction:column;gap:14px}
-.acc__panel p{color:var(--grey);font-size:16.5px;line-height:1.72;max-width:70ch}
-.sec--dark .acc,.sec--dark .acc__item{border-color:#2a2e33}
-.sec--dark .acc__btn{color:var(--white)}
-.sec--dark .acc__panel p{color:#8b939b}
-
-/* --- before / after slider --------------------------------- */
-.ba{position:relative;aspect-ratio:16/9;overflow:hidden;background:#d7ddd2;user-select:none;touch-action:pan-y}
-.ba__layer{position:absolute;inset:0;display:grid;place-items:center}
-.ba__layer--after{clip-path:inset(0 0 0 var(--split,50%))}
-.ba__layer .ph{position:absolute;inset:0;display:grid;place-items:center;padding:24px}
-.ba__layer--before .ph{background:repeating-linear-gradient(135deg,#c9d0c4 0 16px,#c1c9bc 16px 32px)}
-.ba__layer--after .ph{background:repeating-linear-gradient(135deg,#4D8CD4 0 16px,#4485cc 16px 32px)}
-.ba__layer .ph span{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
-.ba__layer--before .ph span{color:#5A6459}
-.ba__layer--after .ph span{color:var(--black)}
-.ba__tag{position:absolute;top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;z-index:3}
-.ba__tag--b{left:14px;background:var(--black);color:var(--white)}
-.ba__tag--a{right:14px;background:var(--white);color:var(--black)}
-.ba__handle{position:absolute;top:0;bottom:0;left:var(--split,50%);width:3px;background:var(--white);z-index:4;pointer-events:none}
-.ba__handle::after{
-  content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:46px;height:46px;background:var(--white);
-  clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
-}
-.ba__range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
-
-/* --- case study -------------------------------------------- */
-.case{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);margin-top:26px}
-.case > div{background:var(--white);padding:30px 28px;display:flex;flex-direction:column;gap:12px}
-.case h4{font-size:15px;font-family:var(--body);font-weight:700;letter-spacing:.18em;color:var(--deep);text-transform:uppercase}
-.case p{font-size:16px;line-height:1.68;color:var(--grey)}
-.case ul li{font-size:15.5px;color:var(--grey);padding-left:16px;position:relative;margin-bottom:7px}
-.case ul li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:3px;background:var(--blue)}
-
-/* --- plan tiers -------------------------------------------- */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
-.plan{background:var(--white);padding:34px 30px 32px;display:flex;flex-direction:column;gap:16px;position:relative}
-.plan--hero{background:var(--black)}
-.plan--hero h3,.plan--hero .plan__price{color:var(--white)}
-.plan--hero p,.plan--hero li{color:#8b939b}
-.plan--hero li::before{background:var(--blue)}
-.plan__flag{position:absolute;top:0;right:0;background:var(--blue);color:var(--black);font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px}
-.plan h3{font-size:29px}
-.plan__price{font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--deep)}
-.plan--hero .plan__price{color:var(--blue)}
-.plan > p{font-size:15.5px;color:var(--grey);line-height:1.6}
-.plan ul{margin-top:4px;display:flex;flex-direction:column;gap:9px}
-.plan li{font-size:15.5px;color:var(--grey);padding-left:18px;position:relative;line-height:1.5}
-.plan li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:3px;background:var(--black)}
-.plan .btn{margin-top:auto;align-self:flex-start}
-
-/* --- team -------------------------------------------------- */
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.team figure{margin:0}
-.team .ph{aspect-ratio:1;background:repeating-linear-gradient(135deg,#dfe4da 0 14px,#d7ddd2 14px 28px);display:grid;place-items:center;padding:16px}
-.team .ph span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8f998e;text-align:center}
-.team b{display:block;margin-top:12px;font-family:var(--display);font-weight:700;font-size:22px;color:var(--black)}
-.team em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
-
-/* --- forms ------------------------------------------------- */
-.form{background:var(--white);box-shadow:inset 0 0 0 1px var(--line);padding:clamp(24px,3.4vw,42px)}
-.form__steps{display:flex;gap:2px;margin-bottom:30px}
-.form__steps li{
-  flex:1;padding:12px 14px;background:var(--chalk);
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#8f998e;
-  display:flex;gap:9px;align-items:center;
-}
-.form__steps li[data-on="true"]{background:var(--black);color:var(--white)}
-.form__steps li[data-on="true"] b{color:var(--blue)}
-.form__steps b{font-weight:500}
-fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:20px}
-fieldset[hidden]{display:none}
-legend{font-family:var(--display);font-weight:700;font-size:27px;text-transform:uppercase;color:var(--black);margin-bottom:6px}
-.field{display:flex;flex-direction:column;gap:8px}
-.field > span{font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
-.field input,.field select,.field textarea{
-  font-family:var(--body);font-size:16px;color:var(--black);
-  padding:14px 16px;background:var(--white);border:1px solid var(--line);width:100%;
-}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:none}
-.field textarea{min-height:120px;resize:vertical}
-.field--row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips label{
-  padding:11px 18px;box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;
-  font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);
-  transition:background .18s,color .18s,box-shadow .18s;
-}
-.chips input{position:absolute;opacity:0;width:0;height:0}
-.chips label:hover{color:var(--black);box-shadow:inset 0 0 0 1px var(--black)}
-.chips input:checked + span,.chips label:has(input:checked){background:var(--black);color:var(--white);box-shadow:none}
-.chips label:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:2px}
-.form__nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
-.form__note{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:#8f998e}
-.form__done{background:var(--chalk);padding:34px 30px;display:none;flex-direction:column;gap:12px}
-.form__done[data-on="true"]{display:flex}
-.form__done h3{font-size:28px}
-.form__done p{color:var(--grey)}
-
-/* --- contact rail ------------------------------------------ */
-.rail{display:flex;flex-direction:column;gap:2px;background:var(--line)}
-.rail a,.rail div{background:var(--white);padding:22px 24px;display:flex;flex-direction:column;gap:4px}
-.rail span{font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
-.rail b{font-family:var(--mono);font-size:16.5px;color:var(--black);font-weight:400}
-.rail a:hover{background:var(--chalk)}
-.rail a:hover b{color:var(--deep)}
-.map{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#dfe4da 0 16px,#d7ddd2 16px 32px);display:grid;place-items:center;padding:24px;text-align:center}
-.map p{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8f998e;line-height:1.7}
-
-/* --- blog -------------------------------------------------- */
-.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.post{display:flex;flex-direction:column;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .2s}
-.post:hover{box-shadow:inset 0 0 0 1px var(--black)}
-.post .ph{aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#dfe4da 0 14px,#d7ddd2 14px 28px);display:grid;place-items:center;padding:16px}
-.post .ph span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8f998e;text-align:center}
-.post__body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:11px;flex:1}
-.post__meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--deep)}
-.post h3{font-size:24px}
-.post p{font-size:15.5px;line-height:1.6;color:var(--grey)}
-.post__more{margin-top:auto;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
-
-.article{max-width:74ch;margin:0 auto;display:flex;flex-direction:column;gap:22px}
-.article h2{font-size:clamp(28px,3.4vw,42px);margin-top:22px}
-.article h3{font-size:clamp(22px,2.4vw,29px);margin-top:14px}
-.article p{font-size:17.5px;line-height:1.78;color:#3d443c}
-.article ul{display:flex;flex-direction:column;gap:10px}
-.article ul li{padding-left:20px;position:relative;font-size:17px;line-height:1.7;color:#3d443c}
-.article ul li::before{content:"";position:absolute;left:0;top:12px;width:9px;height:3px;background:var(--blue)}
-.article blockquote{margin:14px 0;padding:24px 28px;background:var(--chalk);border-left:4px solid var(--blue)}
-.article blockquote p{font-family:var(--display);font-weight:700;font-size:clamp(21px,2.6vw,30px);line-height:1.2;text-transform:uppercase;color:var(--black)}
-.article figure{margin:14px 0}
-.article figure .ph{aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#dfe4da 0 14px,#d7ddd2 14px 28px);display:grid;place-items:center;padding:20px}
-.article figure .ph span{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#8f998e;text-align:center}
-.article figcaption{margin-top:9px;font-family:var(--mono);font-size:12px;color:var(--grey)}
-.artmeta{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#5d646b}
-
-/* --- misc -------------------------------------------------- */
-.list-check{display:grid;grid-template-columns:1fr 1fr;gap:14px 34px}
-.list-check li{padding-left:22px;position:relative;font-size:16px;line-height:1.6;color:var(--grey)}
-.list-check li::before{content:"";position:absolute;left:0;top:10px;width:11px;height:3px;background:var(--blue)}
-.sec--dark .list-check li{color:#8b939b}
-.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
-.areas li{background:var(--white);padding:16px 20px;font-family:var(--mono);font-size:14px;color:#3d443c}
-.dl{display:flex;align-items:center;gap:14px;padding:22px 26px;background:var(--black);color:var(--white)}
-.dl svg{width:26px;height:26px;stroke:var(--blue);stroke-width:2;fill:none;flex:none}
-.dl b{font-family:var(--display);font-weight:700;font-size:22px;color:var(--white);display:block}
-.dl span{font-family:var(--mono);font-size:12px;color:#8b939b}
-
-@media(max-width:1180px){
-  .tiles{grid-template-columns:repeat(2,1fr)}
-  .team{grid-template-columns:repeat(2,1fr)}
-  .posts{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:900px){
-  .cols{grid-template-columns:1fr}
-  .gal,.plans,.case{grid-template-columns:1fr}
-  .areas{grid-template-columns:repeat(2,1fr)}
-  .form__steps{flex-wrap:wrap}
-  .form__steps li{flex:1 1 40%}
-}
-@media(max-width:640px){
-  .gal,.gal--wide,.posts,.team,.tiles,.areas,.list-check,.field--row{grid-template-columns:1fr}
-  .spec thead{display:none}
-  .spec tr{display:block;border-bottom:1px solid var(--line);padding:12px 0}
-  .spec td{display:flex;justify-content:space-between;gap:18px;border:0;padding:5px 0}
-  .spec td::before{content:attr(data-l);font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
-}
-
-/* --- real photos: override placeholder box styling now that .ph / .proj__ph
-   render as <img> instead of empty divs. Attribute selector [src] raises
-   specificity just enough to win over the earlier placeholder rules. --- */
-.ph[src],.proj__ph[src]{
-  display:block;padding:0;background:var(--chalk);
-  width:100%;height:100%;object-fit:cover;
-}
+<!-- ======================= CTA ======================= -->
+<section class="cta">
+  <div class="wrap cta__row">
+    <div>
+      <h2 class="rv">{{ cta_heading }}</h2>
+      <p class="rv rv-d1">{{ cta_text }}</p>
+    </div>
+    <div class="cta__btns rv rv-d2">
+      <a class="btn btn--dark" href="/contact/">
+        Get a Free Consultation
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+      <a class="btn btn--dark" href="https://wa.me/{{ site.whatsapp_number }}?text={{ site.whatsapp_default_message | urlencode }}" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
