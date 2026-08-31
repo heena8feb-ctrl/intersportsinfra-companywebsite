@@ -369,6 +369,8 @@ ul{margin:0;padding:0;list-style:none}
 
 /* --- generic two-column prose ------------------------------ */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:start}
+.cols--contact{grid-template-columns:1.35fr 1fr}
+@media(max-width:900px){.cols--contact{grid-template-columns:1fr}}
 .prose{display:flex;flex-direction:column;gap:18px;max-width:62ch}
 .prose h3{font-size:26px;margin-top:12px}
 .prose p{color:var(--grey);font-size:16.5px;line-height:1.72}
