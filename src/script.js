@@ -165,17 +165,24 @@
     var sets = mform.querySelectorAll('fieldset');
     var crumbs = mform.querySelectorAll('.form__steps li');
     var done = mform.querySelector('.form__done');
+    var nextBtn = mform.querySelector('[data-next]');
+    var prevBtn = mform.querySelector('[data-prev]');
+    var submitBtn = mform.querySelector('button[type="submit"]');
     var at = 0;
+    var submitted = false;
 
     var paint = function () {
       Array.prototype.forEach.call(sets, function (fs, i) { fs.hidden = i !== at; });
       Array.prototype.forEach.call(crumbs, function (li, i) {
         li.setAttribute('data-on', String(i === at));
       });
+      if (prevBtn) prevBtn.disabled = at === 0;
+      if (nextBtn) nextBtn.disabled = at === sets.length - 1;
     };
     paint();
 
     mform.addEventListener('click', function (e) {
+      if (submitted) return;
       var next = e.target.closest('[data-next]');
       var prev = e.target.closest('[data-prev]');
       if (next) {
@@ -185,19 +192,70 @@
           if (!bad && !f.checkValidity()) bad = f;
         });
         if (bad) { bad.reportValidity(); return; }
-        if (at < sets.length - 1) { at++; paint(); mform.scrollIntoView ? null : null; }
+        if (at < sets.length - 1) { at++; paint(); }
       }
       if (prev && at > 0) { at--; paint(); }
     });
 
+    var collectPayload = function () {
+      var fd = new FormData(mform);
+      var payload = {
+        sport: fd.get('sport') || '',
+        type: fd.get('type') || '',
+        city: fd.get('city') || '',
+        state: fd.get('state') || '',
+        plot: fd.get('plot') || '',
+        courts: fd.get('courts') || '',
+        ground: fd.get('ground') || '',
+        timeline: fd.get('timeline') || '',
+        extras: fd.getAll('extras'),
+        notes: fd.get('notes') || '',
+        name: fd.get('name') || '',
+        org: fd.get('org') || '',
+        phone: fd.get('phone') || '',
+        email: fd.get('email') || ''
+      };
+      return payload;
+    };
+
+    var setNavDisabled = function (isDisabled) {
+      if (prevBtn) prevBtn.disabled = isDisabled;
+      if (nextBtn) nextBtn.disabled = isDisabled;
+      if (submitBtn) submitBtn.disabled = isDisabled;
+    };
+
     mform.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (submitted) return;
       if (!mform.checkValidity()) { mform.reportValidity(); return; }
-      Array.prototype.forEach.call(sets, function (fs) { fs.hidden = true; });
-      var nav = mform.querySelector('.form__nav');
-      if (nav) nav.hidden = true;
-      Array.prototype.forEach.call(crumbs, function (li) { li.setAttribute('data-on', 'true'); });
-      if (done) done.setAttribute('data-on', 'true');
+
+      setNavDisabled(true);
+      if (submitBtn) submitBtn.textContent = 'Sending…';
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(collectPayload())
+      })
+        .then(function (res) { return res.json().then(function (json) { return { ok: res.ok, json: json }; }); })
+        .then(function (result) {
+          if (!result.ok || !result.json || result.json.ok !== true) {
+            throw new Error((result.json && result.json.error) || 'Send failed');
+          }
+          submitted = true;
+          Array.prototype.forEach.call(sets, function (fs) { fs.hidden = true; });
+          var nav = mform.querySelector('.form__nav');
+          if (nav) nav.hidden = true;
+          Array.prototype.forEach.call(crumbs, function (li) { li.setAttribute('data-on', 'true'); });
+          if (done) done.setAttribute('data-on', 'true');
+        })
+        .catch(function () {
+          setNavDisabled(false);
+          if (nextBtn) nextBtn.disabled = at === sets.length - 1;
+          if (prevBtn) prevBtn.disabled = at === 0;
+          if (submitBtn) submitBtn.textContent = 'Send Request';
+          window.alert('Something went wrong sending your request. Please try again, or call/WhatsApp us directly.');
+        });
     });
   }
 
