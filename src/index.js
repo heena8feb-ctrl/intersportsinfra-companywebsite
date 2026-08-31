@@ -59,21 +59,14 @@ async function handleContact(request, env) {
     <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
   `;
 
-  // TEMP DIAGNOSTIC — remove after debugging. Never logs the actual key.
-  const rawKey = env.RESEND_API_KEY || "";
-  console.log(
-    `RESEND_API_KEY diagnostic: present=${!!env.RESEND_API_KEY} length=${rawKey.length} startsWith=${rawKey.slice(0, 4)} hasWhitespace=${/\s/.test(rawKey)}`
-  );
-  const cleanKey = rawKey.trim();
-
   const resendResponse = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${cleanKey}`,
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Inter Sports Infra Website <onboarding@resend.dev>",
+      from: "Inter Sports Infra <contact@intersportsinfra.com>",
       to: "intersportsinfra@gmail.com",
       reply_to: data.email,
       subject: `New enquiry: ${data.sport} — ${data.city}`,
