@@ -146,6 +146,12 @@ cta_text: "Call or WhatsApp between 9:30 and 18:30. You will reach someone who h
             <label class="field"><span>Email</span><input type="email" name="email" required></label>
           </div>
           <p class="form__note">We reply within one working day. We do not sell or share your details.</p>
+          <div class="field" style="margin-top:6px">
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+              <input type="checkbox" name="consent" value="yes" required style="margin-top:4px;flex:none">
+              <span style="font-size:14.5px;line-height:1.6;color:var(--grey)">I have read the <a href="/privacy/" target="_blank" rel="noopener">Privacy Notice</a> and consent to {{ site.company_name }} collecting and using my personal data above to respond to this enquiry.</span>
+            </label>
+          </div>
         </fieldset>
 
         <div class="form__nav">
