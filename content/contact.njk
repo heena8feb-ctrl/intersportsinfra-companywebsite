@@ -141,7 +141,7 @@ cta_text: "Call or WhatsApp between 9:30 and 18:30. You will reach someone who h
             <label class="field"><span>Organisation</span><input type="text" name="org" placeholder="School, club, builder…"></label>
           </div>
           <div class="field--row">
-            <label class="field"><span>Phone / WhatsApp</span><input type="tel" name="phone" required placeholder="+91"></label>
+            <label class="field"><span>Phone / WhatsApp</span><input type="tel" name="phone" required placeholder="+91 9876543210" pattern="(\+91[\s-]?)?[6-9]\d{9}" title="Enter a valid 10-digit Indian mobile number, e.g. 9876543210" inputmode="tel"></label>
             <label class="field"><span>Email</span><input type="email" name="email" required></label>
           </div>
           <p class="form__note">We reply within one working day. We do not sell or share your details.</p>
