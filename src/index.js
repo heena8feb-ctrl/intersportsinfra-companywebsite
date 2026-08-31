@@ -28,7 +28,7 @@ async function handleContact(request, env) {
   }
 
   // Basic required-field check (mirrors what the form already requires client-side).
-  const required = ["name", "phone", "email", "sport", "city", "plot"];
+  const required = ["name", "phone", "email", "sport", "city", "plot", "consent"];
   for (const field of required) {
     if (!data[field] || String(data[field]).trim() === "") {
       return new Response(JSON.stringify({ ok: false, error: `Missing field: ${field}` }), {
@@ -37,6 +37,8 @@ async function handleContact(request, env) {
       });
     }
   }
+
+  const consentTimestamp = new Date().toISOString();
 
   const html = `
     <h2>New enquiry from the website</h2>
@@ -57,6 +59,8 @@ async function handleContact(request, env) {
     <p><strong>Organisation:</strong> ${escapeHtml(data.org || "—")}</p>
     <p><strong>Phone:</strong> ${escapeHtml(data.phone)}</p>
     <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+    <hr>
+    <p style="color:#888;font-size:12px">Privacy Notice consent given: ${escapeHtml(consentTimestamp)} UTC</p>
   `;
 
   const resendResponse = await fetch("https://api.resend.com/emails", {
