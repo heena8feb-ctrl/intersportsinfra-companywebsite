@@ -65,14 +65,19 @@ standards_lead: "Built to<br>federation<br>standard"
 standards_badges:
   - code: "FIFA"
     label: "Quality turf systems"
+    logo: "/images/standards-fifa.png"
   - code: "ITF"
     label: "Tennis court pace"
+    logo: "/images/standards-itf.png"
   - code: "BWF"
     label: "Badminton flooring"
+    logo: "/images/standards-bwf.png"
   - code: "FIBA"
     label: "Basketball surfaces"
-  - code: "IAAF"
+    logo: "/images/standards-fiba.png"
+  - code: "World Athletics"
     label: "Athletics tracks"
+    logo: "/images/standards-world-athletics.png"
 
 statement_eyebrow: "Why we exist"
 statement_quote: "We don't just build courts. We build <em>the place you play.</em>"
@@ -231,7 +236,10 @@ cta_text: "Send us the site dimensions and the sport. You'll have a layout and a
     <p class="std__lead">{{ standards_lead | safe }}</p>
     <div class="std__badges">
       {% for b in standards_badges %}
-      <div {% set _d = loop.index0 % 3 %}class="badge rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}"><b>{{ b.code }}</b><span>{{ b.label }}</span></div>
+      <div {% set _d = loop.index0 % 3 %}class="badge{% if b.logo %} badge--logo{% endif %} rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}">
+        {% if b.logo %}<img class="badge__logo" src="{{ b.logo }}" alt="{{ b.code }} logo" loading="lazy">{% else %}<b>{{ b.code }}</b>{% endif %}
+        <span>{{ b.label }}</span>
+      </div>
       {% endfor %}
     </div>
   </div>
