@@ -169,20 +169,30 @@
     var prevBtn = mform.querySelector('[data-prev]');
     var submitBtn = mform.querySelector('button[type="submit"]');
     var submitBtnOriginalHTML = submitBtn ? submitBtn.innerHTML : '';
+    var consentCheckbox = mform.querySelector('[name="consent"]');
     var at = 0;
     var submitted = false;
+
+    var updateSubmitState = function () {
+      var onLastStep = at === sets.length - 1;
+      if (submitBtn) submitBtn.disabled = !(onLastStep && consentCheckbox && consentCheckbox.checked);
+      return onLastStep;
+    };
 
     var paint = function () {
       Array.prototype.forEach.call(sets, function (fs, i) { fs.hidden = i !== at; });
       Array.prototype.forEach.call(crumbs, function (li, i) {
         li.setAttribute('data-on', String(i === at));
       });
-      var onLastStep = at === sets.length - 1;
+      var onLastStep = updateSubmitState();
       if (prevBtn) prevBtn.disabled = at === 0;
       if (nextBtn) nextBtn.disabled = onLastStep;
-      if (submitBtn) submitBtn.disabled = !onLastStep;
     };
     paint();
+
+    if (consentCheckbox) {
+      consentCheckbox.addEventListener('change', updateSubmitState);
+    }
 
     mform.addEventListener('click', function (e) {
       if (submitted) return;
@@ -262,10 +272,8 @@
           setNavDisabled(false);
           if (nextBtn) nextBtn.disabled = at === sets.length - 1;
           if (prevBtn) prevBtn.disabled = at === 0;
-          if (submitBtn) {
-            submitBtn.disabled = at !== sets.length - 1;
-            submitBtn.innerHTML = submitBtnOriginalHTML;
-          }
+          if (submitBtn) submitBtn.innerHTML = submitBtnOriginalHTML;
+          updateSubmitState();
           window.alert('Something went wrong sending your request. Please try again, or call/WhatsApp us directly.');
         });
     });
