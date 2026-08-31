@@ -131,56 +131,6 @@ projects:
     image: "/images/projects-6-photo-track-curve-lane-markings.jpg"
     alt: "Photo — track curve, lane markings"
 
-case_studies:
-  - eyebrow: "Case study 01"
-    heading: "The Ground That Flooded Twice"
-    meta: "School ground, Ballabhgarh · 7-a-side football turf · 1,150 sq m · 2025"
-    dark: false
-    columns:
-      - heading: "Challenge"
-        text: "Two previous contractors had laid turf on the same ground. Both surfaces lifted within one monsoon. The school had lost two seasons and most of its faith in contractors."
-        items:
-          - "Standing water after every rain"
-          - "Turf seams opening at the low corner"
-          - "No drainage design on either previous contract"
-      - heading: "Solution"
-        text: "We surveyed levels before quoting and found the ground fell towards the building, not away from it. The turf was never the problem."
-        items:
-          - "Re-graded the sub-grade to a 1:100 cross fall"
-          - "New perimeter channel and geotextile-wrapped drain"
-          - "200 mm graded sub-base compacted to 95% Proctor"
-          - "50 mm monofilament turf over a 12 mm shock pad"
-      - heading: "Result"
-        text: "Through two monsoons with no standing water and no seam movement. The school now runs paid evening slots on it, which covers the AMC."
-        items:
-          - "Playable within 60 minutes of heavy rain"
-          - "Zero warranty claims to date"
-          - "Annual AMC signed at handover"
-  - eyebrow: "Case study 02"
-    heading: "One Tennis Court, Four Pickleball Courts"
-    meta: "Residential club, Gurugram · conversion · 2025"
-    dark: true
-    columns:
-      - heading: "Challenge"
-        text: "A single ageing tennis court booked twice a week, while forty residents had started asking for pickleball. The committee did not want to lose tennis entirely."
-        items:
-          - "Court surface at end of life, hairline cracking"
-          - "Split membership between two sports"
-          - "Budget for one court, not five"
-      - heading: "Solution"
-        text: "Full resurface, then dual marking: tennis in white, four pickleball courts in a contrasting colour inside the same enclosure."
-        items:
-          - "Crack repair and 6-coat acrylic resurface"
-          - "Tennis lines white, pickleball in blue"
-          - "Portable pickleball net posts, sleeved"
-          - "Lighting upgraded to 300 lux"
-      - heading: "Result"
-        text: "Court utilisation went from two sessions a week to daily. The committee added a second conversion the following year."
-        items:
-          - "4 pickleball courts within the tennis footprint"
-          - "Tennis retained, no membership lost"
-          - "Delivered in 11 working days"
-
 cta_heading: "Want to Walk One of These?"
 cta_text: "Tell us your city and we will arrange a visit to the nearest finished project."
 ---
@@ -225,7 +175,7 @@ cta_text: "Tell us your city and we will arrange a visit to the nearest finished
     <div class="grid-proj">
       {% for p in projects %}
       {% set _d = loop.index0 % 3 %}
-      <a class="proj rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="#case-1" data-sport="{{ p.sport }}" data-type="{{ p.type }}">
+      <a class="proj rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}" href="/contact/" data-sport="{{ p.sport }}" data-type="{{ p.type }}">
         <div class="proj__img"><img class="proj__ph" src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></div>
         <div class="proj__body"><h3>{{ p.title }}</h3><p class="mono">{{ p.meta }}</p></div>
       </a>
@@ -233,43 +183,6 @@ cta_text: "Tell us your city and we will arrange a visit to the nearest finished
     </div>
   </div>
 </section>
-
-<section class="sec sec--chalk">
-  <div class="wrap">
-    <div class="sec__head">
-      <div class="sec__label"><p class="eyebrow">{{ ba_eyebrow }}</p><h2 class="rv">{{ ba_heading }}</h2></div>
-      <p class="rv rv-d1">{{ ba_intro }}</p>
-    </div>
-    <div class="ba rv rv-d1">
-      <div class="ba__layer ba__layer--before"><img class="ph" src="{{ ba_before_image }}" alt="{{ ba_before_alt }}" loading="lazy"></div>
-      <div class="ba__layer ba__layer--after"><img class="ph" src="{{ ba_after_image }}" alt="{{ ba_after_alt }}" loading="lazy"></div>
-      <span class="ba__tag ba__tag--b">Before</span>
-      <span class="ba__tag ba__tag--a">After</span>
-      <span class="ba__handle" aria-hidden="true"></span>
-      <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Reveal the after photograph">
-    </div>
-  </div>
-</section>
-
-{% for cs in case_studies %}
-<section class="sec{% if cs.dark %} sec--dark{% endif %}"{% if loop.index0 == 0 %} id="case-1"{% endif %}>
-  <div class="wrap">
-    <div class="sec__head">
-      <div class="sec__label"><p class="eyebrow{% if cs.dark %} eyebrow--on-dark{% endif %}">{{ cs.eyebrow }}</p><h2 class="rv">{{ cs.heading }}</h2></div>
-      <p class="rv rv-d1">{{ cs.meta }}</p>
-    </div>
-    <div class="case rv rv-d1"{% if cs.dark %} style="background:#2a2e33"{% endif %}>
-      {% for col in cs.columns %}
-      <div{% if cs.dark %} style="background:#0B0F0D"{% endif %}>
-        <h4>{{ col.heading }}</h4>
-        <p{% if cs.dark %} style="color:#8b939b"{% endif %}>{{ col.text }}</p>
-        <ul>{% for item in col.items %}<li{% if cs.dark %} style="color:#8b939b"{% endif %}>{{ item }}</li>{% endfor %}</ul>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endfor %}
 
 <section class="cta">
   <div class="wrap cta__row">
