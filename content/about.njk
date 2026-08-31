@@ -64,59 +64,6 @@ method_steps:
     title: "Maintenance"
     description: "Annual care so the surface still plays to standard in year five."
 
-materials_eyebrow: "Materials & technology"
-materials_heading: "What We Build With"
-materials_intro: "We do not manufacture. We specify, and we will name the system on the quote rather than write \"premium imported turf\"."
-turf_table:
-  caption: "Artificial turf systems"
-  rows:
-    - item: "Yarn type"
-      spec: "Monofilament PE, 8,800–13,000 dtex"
-    - item: "Pile height"
-      spec: "40 mm hockey / 50–60 mm football"
-    - item: "Backing"
-      spec: "Woven PP, PU or latex coated"
-    - item: "Shock pad"
-      spec: "10–15 mm closed-cell PE foam"
-    - item: "Infill"
-      spec: "Silica sand + SBR / EPDM / TPE"
-    - item: "UV stability"
-      spec: "8-year yarn warranty typical"
-indoor_table:
-  caption: "Acrylic, PU & indoor systems"
-  rows:
-    - item: "Acrylic hard court"
-      spec: "6–8 coat system, sand-loaded to pace"
-    - item: "PU sports floor"
-      spec: "2–4 mm self-levelling polyurethane"
-    - item: "EPDM"
-      spec: "10–15 mm wet-pour rubber granule"
-    - item: "Athletics track"
-      spec: "13 mm sandwich or full-PU spray"
-    - item: "Indoor vinyl"
-      spec: "4.5–7 mm PVC, BWF / FIBA approved"
-    - item: "Wooden floor"
-      spec: "22 mm maple on sprung batten cradle"
-drainage_table:
-  caption: "Sub-base & drainage"
-  rows:
-    - item: "Sub-grade"
-      spec: "Compacted to 95% Proctor density"
-    - item: "Granular sub-base"
-      spec: "150–225 mm graded stone"
-    - item: "Binder course"
-      spec: "25–40 mm bituminous concrete"
-    - item: "Cross fall"
-      spec: "1:100 to 1:120, single plane"
-    - item: "Perimeter drain"
-      spec: "Channel + geotextile-wrapped pipe"
-    - item: "Testing"
-      spec: "Compaction and flatness recorded"
-why_publish_heading: "Why we publish this"
-why_publish_paragraphs:
-  - "Most sports surface quotes in India name no system, no dtex, no coat count and no compaction figure. That vagueness is where corners get cut after the contract is signed."
-  - "Ours names all of it. Take our specification to any other contractor and compare like for like — we would rather win on the number than on the wording."
-
 team_eyebrow: "Who you'll deal with"
 team_heading: "A Team That's Done This Before"
 team_text: "Every project is handled by our own team of experienced sports infrastructure consultants, project managers and site engineers — not subcontracted labour with no stake in the outcome. The same engineer who writes your specification is the one who inspects the base before the surface goes down, and signs off at handover."
@@ -213,41 +160,6 @@ cta_text: "We will take you to a project near you so you can walk the surface be
       {% for step in method_steps %}
       <div class="step"><span class="step__n">{{ step.number }}</span><h3>{{ step.title }}</h3><p>{{ step.description }}</p><span class="step__bar"><i></i></span></div>
       {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="sec__head">
-      <div class="sec__label"><p class="eyebrow">{{ materials_eyebrow }}</p><h2 class="rv">{{ materials_heading }}</h2></div>
-      <p class="rv rv-d1">{{ materials_intro }}</p>
-    </div>
-    <div class="cols">
-      <div class="rv">
-      <table class="spec">
-        <caption>{{ turf_table.caption }}</caption>
-        <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
-        <tbody>{% for row in turf_table.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>{% endfor %}</tbody>
-      </table></div>
-      <div class="rv rv-d1">
-      <table class="spec">
-        <caption>{{ indoor_table.caption }}</caption>
-        <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
-        <tbody>{% for row in indoor_table.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>{% endfor %}</tbody>
-      </table></div>
-    </div>
-    <div class="cols" style="margin-top:34px">
-      <div class="rv">
-      <table class="spec">
-        <caption>{{ drainage_table.caption }}</caption>
-        <thead><tr><th scope="col">Item</th><th scope="col">Specification</th></tr></thead>
-        <tbody>{% for row in drainage_table.rows %}<tr><td data-l="Item">{{ row.item }}</td><td data-l="Spec">{{ row.spec }}</td></tr>{% endfor %}</tbody>
-      </table></div>
-      <div class="prose rv rv-d1">
-        <h3>{{ why_publish_heading }}</h3>
-        {% for para in why_publish_paragraphs %}<p>{{ para }}</p>{% endfor %}
-      </div>
     </div>
   </div>
 </section>
