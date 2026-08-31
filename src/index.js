@@ -66,7 +66,7 @@ async function handleContact(request, env) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Inter Sports Infra <contact@intersportsinfra.com>",
+      from: "Inter Sports Infra <noreply@intersportsinfra.com>",
       to: "intersportsinfra@gmail.com",
       reply_to: data.email,
       subject: `New enquiry: ${data.sport} — ${data.city}`,
