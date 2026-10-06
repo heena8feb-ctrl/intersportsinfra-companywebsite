@@ -6,13 +6,14 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="theme-color" content="#0B0F0D">
-<link rel="canonical" href="{{ site.website }}{{ page.url | replace('/index.html','') | replace('.html','') }}">
+{% set pageUrl = "https://www.intersportsinfra.com" + (page.url | replace('/index.html','/') | replace('.html','')) %}
+<link rel="canonical" href="{{ pageUrl }}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ ogTitle or title }}">
 <meta property="og:description" content="{{ ogDescription or description }}">
-<meta property="og:url" content="{{ site.website }}">
+<meta property="og:url" content="{{ pageUrl }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
