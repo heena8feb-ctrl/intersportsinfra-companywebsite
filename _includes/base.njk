@@ -24,6 +24,10 @@
 {{ schema | jsonify | safe }}
 </script>
 {% endif %}
+{% set _svc = crumb_label | serviceSchema(description, page.url) %}
+{% if _svc %}<script type="application/ld+json">{{ _svc | safe }}</script>{% endif %}
+{% set _faq = faqs | faqSchema(groups) %}
+{% if _faq %}<script type="application/ld+json">{{ _faq | safe }}</script>{% endif %}
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8GER1F8X"></script>
 <script>
@@ -121,6 +125,11 @@
         <h4>Quick links</h4>
         <ul>
           <li><a href="/services/">Services</a></li>
+          <li><a href="/football-turf/">Football turf</a></li>
+          <li><a href="/pickleball-courts/">Pickleball courts</a></li>
+          <li><a href="/badminton-courts/">Badminton courts</a></li>
+          <li><a href="/basketball-courts/">Basketball courts</a></li>
+          <li><a href="/tennis-courts/">Tennis courts</a></li>
           <li><a href="/projects/">Projects</a></li>
           <li><a href="/about/">About us</a></li>
           <li><a href="/maintenance/">Maintenance</a></li>
@@ -147,12 +156,12 @@
           <a href="https://wa.me/{{ site.whatsapp_number }}" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.16c-.25.7-1.44 1.34-1.98 1.39-.54.05-1.04.24-2.94-.61-2.28-1.02-3.72-3.4-3.83-3.56-.11-.16-.9-1.24-.9-2.36 0-1.12.58-1.67.79-1.9.2-.23.44-.29.59-.29h.42c.14 0 .32-.05.5.38.18.43.63 1.53.68 1.64.05.11.09.24.01.39-.07.16-.14.25-.28.4l-.2.24c-.09.11-.19.22-.08.42.11.2.5.86 1.06 1.4.73.68 1.34.9 1.53.99.19.1.3.08.42-.05.11-.13.5-.58.63-.78.13-.2.26-.16.44-.1.18.07 1.13.53 1.32.63.19.09.32.14.37.22.05.09.05.52-.2 1.22Z"/></svg>
           </a>
-          <a href="{{ site.social.instagram_url }}" aria-label="Instagram">
+          {% if site.social.instagram_url and site.social.instagram_url != "#" %}<a href="{{ site.social.instagram_url }}" aria-label="Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.5 1 .5.5.77.9 1 1.5.17.4.37 1 .42 2.2.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-1 1.5-.5.5-.9.77-1.5 1-.4.17-1 .37-2.2.42-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.5-1-.5-.5-.77-.9-1-1.5-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 1-1.5.5-.5.9-.77 1.5-1 .4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2Zm0 2.3a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6Zm6.9-2.6a1.55 1.55 0 1 1-3.1 0 1.55 1.55 0 0 1 3.1 0Z"/></svg>
-          </a>
-          <a href="{{ site.social.linkedin_url }}" aria-label="LinkedIn">
+          </a>{% endif %}
+          {% if site.social.linkedin_url and site.social.linkedin_url != "#" %}<a href="{{ site.social.linkedin_url }}" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21 8.65 22 10.4 22 13.4V21h-4v-6.8c0-1.6-.6-2.7-2-2.7-1.2 0-1.9.8-2.2 1.6-.1.3-.13.7-.13 1.1V21h-4V9Z"/></svg>
-          </a>
+          </a>{% endif %}
         </div>
       </div>
     </div>
@@ -161,7 +170,7 @@
 
     <div class="ftr__base">
       <p>Turf · Courts · Tracks · Flooring · Civil</p>
-      <p>© <span data-year>2026</span> {{ site.company_name }} · GSTIN {{ site.gstin }}</p>
+      <p>© <span data-year>2026</span> {{ site.company_name }}{% if site.gstin and 'X' not in site.gstin %} · GSTIN {{ site.gstin }}{% endif %}</p>
     </div>
   </div>
 </footer>

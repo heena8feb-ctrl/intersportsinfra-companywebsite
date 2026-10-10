@@ -85,6 +85,16 @@
         el.textContent = t % 1 === 0 ? Math.round(t).toLocaleString('en-IN') : t.toFixed(1);
       });
     } else {
+      // The real numbers are in the HTML (for crawlers and no-JS visitors).
+      // Counters already on screen keep them; ones below the fold reset to 0
+      // so they can count up when scrolled into view.
+      Array.prototype.forEach.call(counters, function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.dataset.ran = '1';
+        } else {
+          el.textContent = '0';
+        }
+      });
       var cio = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;

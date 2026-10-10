@@ -7,8 +7,11 @@ description: "Inter Sports Infra LLP designs and builds football turf, picklebal
 schema:
   "@context": "https://schema.org"
   "@type": "GeneralContractor"
+  "@id": "https://www.intersportsinfra.com/#business"
   name: "Inter Sports Infra LLP"
   url: "https://www.intersportsinfra.com/"
+  description: "Design and build of football turf, pickleball, badminton, basketball and tennis courts, athletics tracks and sports flooring, including the civil works beneath them."
+  image: "https://www.intersportsinfra.com/images/index-1-photo-wide-shot-of-finished-turf.jpg"
   telephone: "+91-92179-81815"
   email: "intersportsinfra@gmail.com"
   address:
@@ -18,7 +21,12 @@ schema:
     addressRegion: "Haryana"
     postalCode: "121004"
     addressCountry: "IN"
-  areaServed: ["New Delhi", "Mumbai", "Bangalore", "Guwahati"]
+  areaServed: ["Faridabad", "Gurugram", "New Delhi", "Noida", "Ghaziabad", "Mumbai", "Bengaluru", "Guwahati"]
+  openingHoursSpecification:
+    "@type": "OpeningHoursSpecification"
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    opens: "09:30"
+    closes: "18:30"
   slogan: "Sports surfaces, engineered."
 
 hero_eyebrow: "Sports surfaces, engineered."
@@ -93,32 +101,32 @@ featured_projects:
     title: "Full-size Football Turf"
     meta: "Monofilament turf · shock pad base"
     image: "/images/index-1-photo-wide-shot-of-finished-turf.jpg"
-    alt: "Photo — wide shot of finished turf"
+    alt: "Wide shot of finished turf"
   - sport: "pickleball"
     title: "Pickleball Courts"
     meta: "8-coat acrylic · twin courts · kitchen line marking"
     image: "/images/pickleball-courts-3-photo-colour-coat-application.jpg"
-    alt: "Photo — two courts, line detail"
+    alt: "Two courts, line detail"
   - sport: "badminton"
     title: "Indoor Badminton Hall"
     meta: "BWF-approved vinyl flooring"
     image: "/images/index-3-photo-indoor-hall-players.jpg"
-    alt: "Photo — indoor hall, players"
+    alt: "Indoor hall, players"
   - sport: "basketball"
     title: "Basketball Court"
     meta: "Acrylic on concrete · FIBA dimensions"
     image: "/images/basketball-courts-2-photo-key-and-free-throw-circle.jpg"
-    alt: "Photo — key and free-throw circle"
+    alt: "Key and free-throw circle"
   - sport: "tennis"
     title: "Tennis Court Resurfacing"
     meta: "Crack repair · recoat · ITF medium pace"
     image: "/images/index-5-photo-court-from-the-baseline.jpg"
-    alt: "Photo — court from the baseline"
+    alt: "Court from the baseline"
   - sport: "track"
     title: "Athletics Track"
-    meta: "EPDM surface · IAAF line markings"
+    meta: "EPDM surface · World Athletics line markings"
     image: "/images/index-6-photo-track-curve-lane-markings.jpg"
-    alt: "Photo — track curve, lane markings"
+    alt: "Track curve, lane markings"
 
 clients_eyebrow: "Trusted by"
 clients_heading: "Schools, Academies, Builders"
@@ -199,7 +207,7 @@ cta_text: "Send us the site dimensions and the sport. You'll have a layout and a
   <div class="wrap">
     <ul>
       {% for s in trust_stats %}
-      <li {% set _d = loop.index0 % 3 %}class="rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}"><b><span data-count="{{ s.value }}">0</span><i>{{ s.suffix }}</i></b><span>{{ s.label }}</span></li>
+      <li {% set _d = loop.index0 % 3 %}class="rv{% if _d > 0 %} rv-d{{ _d }}{% endif %}"><b><span data-count="{{ s.value }}">{{ s.value | inr }}</span><i>{{ s.suffix }}</i></b><span>{{ s.label }}</span></li>
       {% endfor %}
     </ul>
   </div>
