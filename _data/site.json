@@ -14,7 +14,7 @@
   "service_areas": ["Delhi NCR", "Faridabad & Gurugram", "Noida & Ghaziabad", "Mumbai", "Bangalore", "Guwahati & North East"],
   "footer_cities_line": "New Delhi | Mumbai | Bangalore | Guwahati",
   "social": {
-    "instagram_url": "#",
+    "instagram_url": "https://www.instagram.com/intersportsinfra/",
     "linkedin_url": "#"
   }
 }
